@@ -1,0 +1,63 @@
+@media screen and (min-width: 600px) and (max-width: 1046px) {
+  .header__section--location {
+    background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568248627/italianobros/contact/contact-header_mntiyk.jpg");
+    @include mobile-header;
+  }
+  .address__container--address {
+    &--desktop {
+      @include desktop-layout-column;
+      &--heading {
+        @include desktop-layout-heading;
+
+        & h2 {
+          text-transform: uppercase;
+          font-size: 2rem;
+          color: $gold-color;
+        }
+      }
+      &--section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+    &--address-column {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 2rem;
+      color: $dark-color;
+
+      & h3 {
+        color: $dark-color;
+        margin: 1rem;
+      }
+      & hr {
+        @include hr-gold;
+      }
+      & p {
+        margin: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@media screen and (min-width: 900px) {
+  .header__section {
+    &--desktop {
+      background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568246178/italianobros/home/main_header_pci4iq.jpg") center center fixed;
+      @include desktop-main-header;
+      &--hero-box {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        z-index: 2;
+        & h1 {
+          font-size: 4rem;
+          font-weight: 500;
+          margin: 0 0 2rem 0;
+          color: #fff;
+          max-width: 100rem;
+        }
+
+        & button {
+          height: 3.2rem;
+          width: 14rem;
+        }
+      }
+    }
+  }
+}

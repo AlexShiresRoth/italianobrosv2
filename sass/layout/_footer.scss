@@ -1,0 +1,178 @@
+.footer__section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	background: $dark-color;
+	padding: 2rem;
+	font-family: 'Cormorant Garamond';
+
+	&--container {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		min-height: 5rem;
+		&--column {
+			&--right {
+				margin: 2rem;
+
+				& ul {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					justify-content: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					height: 100%;
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1;
+					& a {
+						color: $gold-color;
+						text-decoration: none;
+						font-size: 1.5rem;
+						font-family: 'Cormorant Garamond';
+						margin: 1rem 0;
+						& li {
+							list-style: none;
+							margin: 0 0.3rem;
+							font-size: 1.5rem;
+						}
+					}
+				}
+			}
+		}
+
+		&--column {
+			&--left {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-ms-flex-pack: distribute;
+				justify-content: space-around;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				margin: 2rem;
+				-webkit-box-flex: 0.5;
+				-ms-flex: 0.5;
+				flex: 0.5;
+
+				& h4 {
+					color: $gold-color;
+					font-size: 1.3rem;
+					font-weight: 300;
+					text-transform: uppercase;
+					margin: 1rem 0;
+				}
+				& p {
+					color: #fff;
+					margin: 1rem 0;
+					font-size: 1.5rem;
+					font-weight: 400;
+					font-family: 'Cormorant Garamond';
+				}
+				& a {
+					color: $gold-color;
+					margin: 1rem 0;
+					font-size: 1.5rem;
+					font-weight: 400;
+					font-family: 'Cormorant Garamond';
+					text-decoration: none;
+					transition: all 0.2s ease;
+					&:hover {
+						color: $gold-color;
+						cursor: pointer;
+					}
+				}
+				&--icons {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: row;
+					flex-direction: row;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					justify-content: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					width: 5rem;
+					& img {
+						width: 100%;
+						-o-object-fit: cover;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+.logo-copyright__container {
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 1rem;
+
+	&--footer-logo {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		height: 5rem;
+		width: 15.5rem;
+		margin: 1rem;
+
+		& img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	& p {
+		color: #fff;
+		font-size: 1rem;
+		text-transform: uppercase;
+		margin: 0.8rem;
+		font-family: 'Cormorant Garamond';
+	}
+}

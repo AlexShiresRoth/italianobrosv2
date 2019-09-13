@@ -1,0 +1,218 @@
+///////////////////////////active class//////////////////
+.active {
+	border-bottom: 1px solid $gold-color;
+}
+.activeButton {
+	background: #fff;
+	color: $gold-color;
+}
+
+//////////////////////////////////hiding/////////////////////
+
+.hidden {
+	-webkit-transform: translateY(-100vh);
+	transform: translateY(-100vh);
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	visibility: hidden;
+	max-height: 0;
+}
+/////////////////////mobile headings//////////////////////
+.mobile__heading-center {
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	padding: 3rem;
+
+	& h2 {
+		@include mobile-header-h2;
+		font-family: 'Cormorant Garamond';
+	}
+	& p {
+		font-size: 1.2rem;
+	}
+}
+
+////////////////paragraphs/////////////////////////////////
+.paragraph__section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin: 1.5rem 1rem;
+
+	& p {
+		font-size: 1.2rem;
+		color: $dark-color;
+		line-height: 2;
+		letter-spacing: 1.3px;
+		font-weight: 300;
+	}
+
+	&--center {
+		& p {
+			font-size: 1.2rem;
+			color: $dark-color;
+			line-height: 2;
+			letter-spacing: 1.3px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+}
+.paragraph__section--desktop {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin: 1.5rem 0;
+
+	& p {
+		font-size: 1.25rem;
+		color: $dark-color;
+		line-height: 2;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+	&--subheading {
+		& p {
+			width: 40vw;
+			font-size: 1.25rem;
+			color: $dark-color;
+			line-height: 2;
+			letter-spacing: 1px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+
+	&--center {
+		& h1 {
+			font-size: 3rem;
+		}
+		& p {
+			font-size: 1.25rem;
+			color: $dark-color;
+			line-height: 2;
+			letter-spacing: 1px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+}
+.paragraph__section--desktop-service {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin: 2rem 0;
+	padding: 1rem 17vw;
+	& p {
+		font-size: 1.2rem;
+		color: $dark-color;
+		line-height: 3;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+}
+
+///////////////////////////////////////////////////////////buttonnsss////////////////////////////////////////
+
+.btn__container {
+	&--center {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin: 1rem;
+	}
+}
+
+/////////////////////////////////centering///////////////////////////
+
+.desktop-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 2rem;
+	width: 100%;
+}
+.desktop-container-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 5rem;
+}
+.center {
+	max-width: 95vw;
+}
+.center-med-wide {
+	max-width: 50vw;
+}
+.center-wide {
+	width: 85vw;
+}
+
+//////////////////////////////////animations/////////////////////////////////////
+.fadeIn {
+	animation: fadeIn 1s ease-in-out;
+}
+.fadeInMenu {
+	animation: fadeIn 0.3s ease-in-out;
+}
+.fadeIn-appear {
+	opacity: 0;
+}
+.fadeIn-appear.fadeIn-appear-active {
+	opacity: 1;
+	transition: opacity 1s ease-in;
+}

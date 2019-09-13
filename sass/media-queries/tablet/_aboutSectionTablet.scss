@@ -1,0 +1,33 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .about__section--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    & figure {
+      & img {
+        @include image-large-full-width;
+      }
+    }
+    &--inner {
+      @include desktop-layout-center;
+      padding: 3rem;
+
+      & h1 {
+        @include sub-header;
+      }
+      & hr {
+        @include hr-gold-desktop;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .services__section--desktop {
+    padding: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &--center {
+      @include desktop-layout-center;
+
+      & h1 {
+        @include sub-header;
+      }
+      & hr {
+        @include hr-gold-desktop;
+      }
+    }
+  }
+}

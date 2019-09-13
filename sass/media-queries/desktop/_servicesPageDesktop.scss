@@ -1,0 +1,83 @@
+@media screen and (min-width: 900px) {
+  header.header__section--services {
+    background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568248775/italianobros/services/services-header_jpza6t.jpg");
+    @include desktop-header;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .servicesList__section--desktop {
+    @include desktop-layout-column;
+
+    &--panel {
+      background: $gold-color;
+      height: 5rem;
+      width: 80vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+    }
+
+    &--heading {
+      @include desktop-layout-heading;
+      & h2 {
+        margin: 1rem;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        color: $gold-color;
+      }
+    }
+    &--item {
+      align-items: center;
+      padding: 2rem 0rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      &--image-grid {
+        width: 60vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        grid-template-rows: auto;
+        animation: fadeIn 1s ease-in;
+        &--image {
+          min-height: 300px;
+          min-width: 300px;
+          & img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  div.servicesList__section--desktop--item--heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    & h1 {
+      color: $dark-color;
+    }
+    & hr {
+      margin: 2rem;
+      @include hr-gold-desktop;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.contact__form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: darken($gold-color, 10%);
+	width: 100%;
+	visibility: visible;
+	-webkit-transform: translateY(0vh);
+	transform: translateY(0vh);
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	opacity: 1;
+	max-height: 100vh;
+
+	&--form {
+		opacity: 1;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+		-webkit-transform: translateY(0vh);
+		transform: translateY(0vh);
+		width: 80%;
+		-webkit-transition: all 0s ease;
+		transition: all 0s ease;
+		max-height: 100vh;
+	}
+}
+
+.input-column {
+	margin: 1rem 0;
+	color: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	& label {
+		text-transform: uppercase;
+		margin: 0.5rem 0;
+	}
+	& input {
+		background: darken($gold-color, 10%);
+		color: #fff;
+		border: 0;
+		border-bottom: 1px solid $gold-color;
+	}
+	& input::-webkit-input-placeholder {
+		color: #fff;
+		font-family: 'Cormorant Garamond';
+		font-weight: 300;
+	}
+	& input:-ms-input-placeholder {
+		color: #fff;
+		font-family: 'Cormorant Garamond';
+		font-weight: 300;
+	}
+	& input::-ms-input-placeholder {
+		color: #fff;
+		font-family: 'Cormorant Garamond';
+		font-weight: 300;
+	}
+	& input::placeholder {
+		color: #fff;
+		font-family: 'Cormorant Garamond';
+		font-weight: 300;
+	}
+	& input:focus {
+		outline: none;
+	}
+	& input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0 30px darken($gold-color, 10%) inset !important;
+		-webkit-text-fill-color: #fff !important;
+		padding: 0;
+	}
+
+	& button {
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+		color: $gold-color;
+		margin: 0.5rem;
+		padding: 0.5rem;
+		font-size: 1rem;
+		background: #fff;
+		text-transform: uppercase;
+		border: 1px solid $gold-color;
+		-webkit-transition: all 0.2s ease-in;
+		transition: all 0.2s ease-in;
+
+		&:hover {
+			cursor: pointer;
+			-webkit-box-shadow: 0 3px 3px darken($gold-color, 20%);
+			box-shadow: 0 3px 3px darken($gold-color, 20%);
+		}
+	}
+}

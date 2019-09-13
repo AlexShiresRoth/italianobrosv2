@@ -1,0 +1,38 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .service__menu {
+    width: 102vw;
+    height: auto;
+    background: #fff;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(28%, 60%);
+    box-shadow: 0 4px 10px -10px darken(#fff, 30%);
+    padding: 0 6rem;
+    & ul.service__menu--service-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      height: auto;
+      & li {
+        margin: 1rem 0;
+        transition: all 0.2s ease;
+        padding: 1rem 2rem;
+        & a {
+          text-decoration: none;
+          color: $dark-color;
+          font-size: 1.2rem;
+          font-family: "Cormorant Garamond";
+          &:hover {
+            color: $gold-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

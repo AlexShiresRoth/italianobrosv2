@@ -1,0 +1,51 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .gallery__section--desktop {
+    @include desktop-layout-column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    &--inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      &--center {
+        @include desktop-layout-center;
+
+        & h1 {
+          @include sub-header;
+        }
+        & hr {
+          @include hr-gold-desktop;
+        }
+        & img {
+          @include image-large-wide;
+        }
+      }
+    }
+    &--images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      -webkit-column-gap: 1.5rem;
+      column-gap: 1.5rem;
+      row-gap: 2rem;
+
+      & img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 35vh;
+        width: 25vw;
+      }
+    }
+  }
+}

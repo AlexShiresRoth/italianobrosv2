@@ -1,0 +1,62 @@
+.modal__container{
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        height:100vh;
+        width:100vw;
+        background:transparent;
+        z-index:99999999;
+        position:fixed;
+        top:0;
+        left:0;
+    &--contact{
+
+        &--sent{
+            min-height: 50vh;
+            min-width: 70vw;
+            padding:1rem;
+            color: green;
+            text-align: center;
+            z-index: 99999999;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius:10px;
+            box-shadow: 0 20px 200px #222;
+            align-self:center;
+            opacity:1;
+            transition: all .2s ease;
+        }
+        &--error{
+            min-height: 50vh;
+            min-width: 70vw;
+            padding:1rem;
+            color: red;
+            text-align: center;
+            z-index: 99999999;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius:10px;
+            box-shadow: 0 20px 200px #222;
+            align-self:center;
+            opacity:1;
+            transition: all .2s ease;
+        }
+        &--closed{
+            height: 0vh;
+            width: 0vw;
+            color: black;
+            text-align: center;
+            z-index: 99999999;
+            display: none;
+            top: -200vh;
+            transition:all .2s ease;
+        }
+    }
+}

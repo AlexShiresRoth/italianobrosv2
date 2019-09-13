@@ -1,0 +1,104 @@
+@import 'base/mixins';
+@import 'base/variables';
+
+@import 'layout/modal/modal';
+
+//media queries desktop
+@import 'media-queries/desktop/navigationDesktop';
+@import 'media-queries/desktop/serviceHoverMenu';
+@import 'media-queries/desktop/homePageHeaderDesktop';
+@import 'media-queries/desktop/homepageServicesDesktop';
+@import 'media-queries/desktop/galleryDesktop';
+@import 'media-queries/desktop/aboutSectionDesktop';
+@import 'media-queries/desktop/aboutPageDesktop';
+@import 'media-queries/desktop/contactFormDesktop';
+@import 'media-queries/desktop/servicesPageDesktop';
+@import 'media-queries/desktop/worksSectionDesktop';
+@import 'media-queries/desktop/contactUs';
+@import 'media-queries/desktop/footerDesktop';
+
+//media queries tablet
+@import 'media-queries/tablet/navigationTablet';
+@import 'media-queries/tablet/serviceHoverMenuTablet';
+@import 'media-queries/tablet//homepageHeaderTablet';
+@import 'media-queries/tablet/contactTablet';
+@import 'media-queries/tablet/homepageServicesTablet';
+@import 'media-queries/tablet/galleryTablet';
+@import 'media-queries/tablet/aboutSectionTablet';
+@import 'media-queries/tablet/footerTablet';
+@import 'media-queries/tablet/servicesPageTablet';
+@import 'media-queries/tablet/aboutPageTablet';
+@import 'media-queries/tablet/ourWorkTablet';
+@import 'media-queries/tablet/locationTablet';
+
+//loader style
+@import 'loader/loader';
+
+//mobile navigation
+@import 'layout/navigation/navigation';
+@import 'layout//navigation/contact';
+
+//HomePage
+@import 'layout/homepage/header';
+@import 'layout/homepage/services';
+@import 'layout/homepage/gallery';
+@import 'layout/homepage/about';
+
+//ServicesPage
+@import 'layout/servicespage/servicesHeader';
+@import 'layout/servicespage/servicesListItem';
+
+//About page
+@import 'layout/about/aboutSection';
+
+//OurWork page
+@import 'layout/ourwork/ourWorkHeader';
+@import 'layout/ourwork/worksSection';
+
+//location page
+@import 'layout/location/location';
+
+//footer
+@import 'layout/footer';
+
+//wonky breakpoints
+@import 'media-queries/fix/1046';
+@import 'media-queries/fix/1300Max';
+@import 'media-queries/fix/716';
+@import 'media-queries/fix/2300+';
+
+@import 'reusable/animations';
+@import 'reusable/buttons';
+@import 'reusable/fonts';
+@import 'reusable/utilities';
+@import 'flash/flash-messages';
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html,
+body {
+	font-size: 80%;
+	letter-spacing: 1.3px;
+	font-family: 'Cormorant Garamond', serif;
+	padding: 0;
+	animation: fadeIn 1s ease-in-out;
+}
+body {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+	width: 0.5em;
+}
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+	background-color: darkgray;
+	outline: 1px solid slategray;
+}

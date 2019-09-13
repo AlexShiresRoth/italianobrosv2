@@ -1,0 +1,44 @@
+.header__section--about {
+	background: url('https://res.cloudinary.com/snackmanproductions/image/upload/v1568246114/italianobros/about/about-header_ngompt.jpg');
+	@include mobile-header;
+}
+
+.about__info {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	&--img {
+		@include image-large-full-width;
+	}
+
+	&--inner {
+		padding: 3rem;
+		&--title {
+			& h2 {
+				font-size: 2rem;
+				color: $dark-color;
+				text-transform: uppercase;
+			}
+			& hr {
+				@include hr-gold;
+			}
+		}
+
+		&--paragraph {
+			width: 100%;
+
+			& p {
+				font-size: 1.25rem;
+				color: $dark-color;
+				line-height: 2;
+				letter-spacing: 1.3px;
+				font-weight: 300;
+			}
+		}
+	}
+}

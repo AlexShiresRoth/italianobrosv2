@@ -1,0 +1,172 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .footer__section--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    background: $dark-color;
+    padding: 4rem;
+
+    &--column {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 1rem;
+      height: 100%;
+      &--middle {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        &--top {
+          margin: 4rem 0;
+          & h5 {
+            color: #fff;
+            font-size: 1rem;
+            font-family: "Cormorant Garamond";
+          }
+
+          & p {
+            color: #fff;
+            margin: 1rem 0;
+            font-size: 1rem;
+          }
+        }
+        &--bottom {
+          margin: 4rem 0;
+          & h5 {
+            color: #fff;
+            font-size: 1rem;
+            font-family: "Cormorant Garamond";
+          }
+
+          & p {
+            color: #fff;
+            margin: 1rem 0;
+            font-size: 1rem;
+          }
+          & a {
+            color: $gold-color;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-family: "Cormorant Garamond";
+            text-decoration: none;
+            transition: all 0.2s ease;
+            &:hover {
+              color: $gold-color;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      &--right {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        & h5 {
+          color: #fff;
+          font-size: 1rem;
+          font-family: "Cormorant Garamond";
+        }
+        & ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+          height: 80%;
+          margin: 2rem 0;
+          & li {
+            list-style: none;
+            color: $gold-color;
+
+            & a {
+              font-family: "Cormorant Garamond";
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.logo-copyright__container--desktop {
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+    margin: 2rem 0;
+    &--footer-logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 5rem;
+      width: 14rem;
+      margin: 2rem;
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    & p {
+      color: #fff;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin: 0.8rem;
+    }
+  }
+
+  div.footer__section--container--column {
+    &--left {
+      &--icons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 20%;
+        height: 5rem;
+
+        & img {
+          @include image-small;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+
+    &--top {
+      &--desktop {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: #fff;
+        width: 100%;
+        &--left {
+          &--nav-item {
+            height: 6.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          & ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative;
+            z-index: 0;
+            & li {
+              @include nav-list;
+              margin: 0 1rem;
+              & a {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.navbar__container--top {
+    padding: 1rem;
+  }
+
+  button.btn__transparent--small {
+    padding: 0.5rem 0.2rem;
+    width: 10rem;
+  }
+}

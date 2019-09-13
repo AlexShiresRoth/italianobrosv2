@@ -1,0 +1,55 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .works__section--desktop {
+    @include desktop-layout-column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    &--heading {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 2rem;
+
+      & h2 {
+        @include mobile-header-h2;
+      }
+    }
+  }
+
+  .image__grid--desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 0.6rem;
+    column-gap: 0.6rem;
+    row-gap: 0.6rem;
+    margin: 2rem;
+    &--grid {
+      &--element {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        & img {
+          @include image-normal;
+        }
+      }
+    }
+  }
+}

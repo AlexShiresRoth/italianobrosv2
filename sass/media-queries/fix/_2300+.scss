@@ -1,0 +1,48 @@
+@media screen and (min-width: 2300px) {
+  .center {
+    max-width: 65vw;
+  }
+  .center-med-wide {
+    max-width: 35vw;
+  }
+  .center-wide {
+    width: 75vw;
+  }
+  .about-center{
+    max-width: 65vw;
+  }
+
+  div.paragraph__section--desktop-service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem 23vw;
+    & p {
+      font-size: 1.2rem;
+      color: $dark-color;
+      line-height: 3;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+
+  div.service__menu {
+    width: 103vw;
+    height: auto;
+    background: #fff;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    position: absolute;
+    transform: translate(32%, 60%);
+    box-shadow: 0 4px 10px -10px darken(#fff, 30%);
+    padding: 0 27.5rem;
+  }
+}

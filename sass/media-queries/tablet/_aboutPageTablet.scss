@@ -1,0 +1,125 @@
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .about__info--desktop {
+    @include desktop-layout-column;
+
+    &--heading {
+      @include desktop-layout-heading;
+
+      & h2 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $gold-color;
+      }
+    }
+
+    &--inner {
+      padding: 3rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      &--left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 3rem;
+
+        &--img {
+          @include image-med-wide-tablet;
+        }
+        &--title {
+          padding: 0rem 4rem;
+          & h2 {
+            color: $dark-color;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+          }
+
+          & hr {
+            @include hr-gold;
+          }
+        }
+        &--paragraph {
+          padding: 0rem 4rem;
+          & p {
+            font-size: 1rem;
+            color: $dark-color;
+            line-height: 2;
+            letter-spacing: 1.3px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      &--right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 3rem;
+
+        &--title {
+          padding: 0rem 4rem;
+
+          & h2 {
+            color: $dark-color;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+          }
+          & hr {
+            @include hr-gold;
+          }
+        }
+        &--img {
+          @include image-med-wide-tablet;
+        }
+        &--paragraph {
+          padding: 0rem 4rem;
+          & p {
+            font-size: 1rem;
+            color: $dark-color;
+            line-height: 2;
+            letter-spacing: 1.3px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+  .aboutPage__section--desktop {
+    @include desktop-layout-column;
+
+    &--heading {
+      @include desktop-layout-heading;
+
+      & h2 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $gold-color;
+      }
+    }
+  }
+}

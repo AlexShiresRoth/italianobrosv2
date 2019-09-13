@@ -1,0 +1,145 @@
+@media screen and (min-width: 900px) {
+  header.header__section--about {
+    background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568246114/italianobros/about/about-header_ngompt.jpg");
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: 50% -20vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 65vh;
+    text-align: center;
+  }
+
+  .about__info--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &--heading {
+      & h2 {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        color: $gold-color;
+      }
+    }
+
+    &--inner {
+      padding: 3rem 15rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      &--left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 3rem;
+        -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+        order: 0;
+        &--img {
+          @include image-med-tall;
+        }
+        &--title {
+          & h2 {
+            font-size: 3rem;
+            color: $dark-color;
+            text-transform: uppercase
+          }
+          & hr {
+            @include hr-gold;
+          }
+        }
+        &--paragraph {
+          & p {
+            font-size: 1.2rem;
+            color: $dark-color;
+            line-height: 2;
+            letter-spacing: 1px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      &--right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 3rem;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+
+        &--title {
+          & h2 {
+            font-size: 3rem;
+            color:$dark-color;
+            text-transform: uppercase
+          }
+          & hr {
+            @include hr-gold;
+          }
+        }
+        &--img {
+          @include image-med-tall;
+        }
+        &--paragraph {
+          & p {
+            font-size: 1.2rem;
+            color: $dark-color;
+            line-height: 2;
+            letter-spacing: 1px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutPage__section--desktop {
+    @include desktop-layout-column;
+
+    &--heading {
+      @include desktop-layout-heading;
+
+      & h2 {
+        margin: 1rem;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        color: $gold-color;
+      }
+    }
+  }
+}

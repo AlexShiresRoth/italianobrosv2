@@ -1,0 +1,13 @@
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    header.header__section--services {
+        background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568248775/italianobros/services/services-header_jpza6t.jpg");
+        @include desktop-header-fix;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 2rem;
+      }
+}
