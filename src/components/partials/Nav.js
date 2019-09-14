@@ -15,7 +15,7 @@ export default class Nav extends React.Component {
       toggled: false,
       contactToggled: false,
       serviceToggle: false,
-      isMobile: window.innerWidth > 600,
+      isMobile: false,
     }
   }
 
