@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
   }
   toggleNav = () => {
     this.state.toggled
-      ? this.setState({ toggled: !this.state.toggled })
+      ? this.setState({ toggled: false })
       : this.setState({ toggled: true, contactToggled: false })
   }
 
