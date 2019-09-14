@@ -9,12 +9,14 @@ export default class Header extends React.Component {
     super(props)
 
     this.state = {
-      isMobile: false,
+      isMobile: window.innerWidth > 600,
     }
   }
 
   handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth < 600 })
+    setTimeout(() => {
+      this.setState({ isMobile: window.innerWidth < 600 })
+    },1)
   }
 
   componentDidMount() {

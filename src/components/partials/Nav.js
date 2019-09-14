@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import NavMenu from "./NavMenu"
@@ -6,7 +6,7 @@ import Contact from "./Contact"
 import MobileMenu from "./MobileMenu"
 import { ServiceMenu } from "./ServiceMenu"
 
-import layoutStyles from './Nav.module.scss'
+import layoutStyles from "./Nav.module.scss"
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class Nav extends React.Component {
       toggled: false,
       contactToggled: false,
       serviceToggle: false,
-      isMobile: false,
+      isMobile: window.innerWidth > 600,
     }
   }
 
@@ -56,11 +56,13 @@ export default class Nav extends React.Component {
   }
   //sets state to mobile view
   handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth < 600 })
+    setTimeout(() => {
+      this.setState({ isMobile: window.innerWidth < 600 })
+    }, 1)
   }
   componentDidMount() {
-    this.handleWindowResize()
     window.addEventListener("resize", this.handleWindowResize)
+    this.handleWindowResize()
     this.handleScrolling()
   }
 
@@ -84,7 +86,10 @@ export default class Nav extends React.Component {
   render() {
     const renderMobileNavbar = () => {
       return (
-        <nav className={layoutStyles.navbar__container} style={{ height: "0vh" }}>
+        <nav
+          className={layoutStyles.navbar__container}
+          style={{ height: "0vh" }}
+        >
           <div className={layoutStyles.nb__top}>
             <NavMenu onClick={this.toggleNav} toggled={this.state.toggled} />
 
@@ -99,7 +104,7 @@ export default class Nav extends React.Component {
                 />
               </Link>
             </div>
-            <div/>
+            <div />
           </div>
 
           <Contact

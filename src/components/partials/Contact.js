@@ -111,17 +111,10 @@ export default class Contact extends React.Component {
       })
   }
 
-  //sets state to mobile view
-  handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth < 600 })
-  }
-  componentDidMount() {
-    this.handleWindowResize()
-    window.addEventListener("resize", this.handleWindowResize)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize)
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.isMobile !== prevProps.isMobile) {
+      this.setState({ isMobile: this.props.isMobile })
+    }
   }
 
   //TODO abstract this to another component
@@ -236,7 +229,12 @@ export default class Contact extends React.Component {
                 />
               </div>
               <div className={layoutStyles.cf__input__column}>
-                <button className={layoutStyles.cf__button} onSubmit={this.formSubmit}>Get A Quote</button>
+                <button
+                  className={layoutStyles.cf__button}
+                  onSubmit={this.formSubmit}
+                >
+                  Get A Quote
+                </button>
               </div>
             </form>
           </div>
