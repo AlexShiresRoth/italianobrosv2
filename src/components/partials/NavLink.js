@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 
-import '../../style/main.css';
+import layoutStyles from './NavLink.module.scss';
 
 export const NavLink = props => {
 	const Links = [
@@ -18,7 +18,7 @@ export const NavLink = props => {
 			style={{ textDecoration: 'none' }}
 			key={Math.random() + Math.random() * 10000}
 		>
-			<li className="links">{title}</li>
+			<li className={layoutStyles.mb__anchor}>{title}</li>
 		</Link>
 	));
 

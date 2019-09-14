@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Italiano Bros Enterprise`,
+    title: `Italiano Bros. Enterprise`,
     description: `Custom drywall, plaster and architectural concrete services, throughout Long Island and Manhattan`,
     author: `@ASRproductions`,
   },
@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

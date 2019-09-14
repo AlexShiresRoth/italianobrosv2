@@ -1,25 +1,25 @@
 import React from 'react';
 
-import '../../style/main.css';
+import layoutStyles from './NavMenu.module.scss';
 
 const NavMenu = (props) => {
    
-        if(props.toggled === false){
+        if(!props.toggled){
             return(
-                <div className="nav__icon"
+                <div className={layoutStyles.nb__icon}
                     onClick={props.onClick}>
-                    <span className="nav__icon--line"></span>
-                    <span className="nav__icon--line"></span>
-                    <span className="nav__icon--line"></span>
+                    <span className={layoutStyles.nb__line}></span>
+                    <span className={layoutStyles.nb__line}></span>
+                    <span className={layoutStyles.nb__line}></span>
                 </div>
             )}
-        if(props.toggled === true){
+        if(props.toggled){
             return (
-                <div className="nav__icon"
+                <div className={layoutStyles.nb__icon}
                     onClick={props.onClick}>
-                    <span className="nav__icon--line-rotated"></span>
-                    <span className="nav__icon--line-cleared"></span>
-                    <span className="nav__icon--line-rotated"></span>
+                    <span className={layoutStyles.nb__line__rotated}></span>
+                    <span className={layoutStyles.nb__line__cleared}></span>
+                    <span className={layoutStyles.nb__line__rotated}></span>
                 </div>
             )
         }

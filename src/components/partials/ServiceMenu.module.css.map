@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "ServiceMenu.module.scss"
+    ],
+    "names": [],
+    "file": "ServiceMenu.module.css"
+}

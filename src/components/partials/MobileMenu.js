@@ -1,92 +1,61 @@
 import React, { Fragment } from "react"
 
 import { NavLink } from "./NavLink"
-import "../../style/main.css"
+import layoutStyles from "./MobileMenu.module.scss"
 
 export default class MobileMenu extends React.Component {
   renderMobileMenu = () => {
-    if (this.props.toggled) {
-      return (
-        <div className="mobile__menu">
-          <div className="mobile__menu--body">
-            <ul>
-              <NavLink />
-            </ul>
-          </div>
-          <div className="mobile__menu--footer">
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/italianobros.enterprise/"
-                  target="_blank"
-                >
-                  <img
-                    src={
-                      "https://res.cloudinary.com/snackmanproductions/image/upload/v1568330392/italianobros/icons/Facebook_kcgpqx.png"
-                    }
-                    alt="facebook"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/italianobros.enterprise/"
-                  target="_blank"
-                >
-                  <img
-                    href="https://www.instagram.com/italianobros.enterprise/"
-                    src={
-                      "https://res.cloudinary.com/snackmanproductions/image/upload/v1568330393/italianobros/icons/Instagram_hp37l4.png"
-                    }
-                    alt="Instagram"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+    return (
+      <div
+        className={
+          this.props.toggled ? layoutStyles.mb__menu : layoutStyles.hidden
+        }
+      >
+        <div className={layoutStyles.mb__body}>
+          <ul className={layoutStyles.mb__ul}>
+            <NavLink />
+          </ul>
         </div>
-      )
-    } else {
-      return (
-        <div className="mobile__menu hidden">
-          <div className="mobile__menu--body">
-            <ul>
-              <NavLink />
-            </ul>
-          </div>
-
-          <div className="mobile__menu--footer">
-            <ul>
-              <li>
+        <div className={layoutStyles.mb__footer}>
+          <ul className={layoutStyles.mb__footer}>
+            <li className={layoutStyles.mb__li}>
+              <a
+                href="https://www.facebook.com/italianobros.enterprise/"
+                target="_blank"
+                className={layoutStyles.mb__anchor}
+              >
                 <img
                   src={
                     "https://res.cloudinary.com/snackmanproductions/image/upload/v1568330392/italianobros/icons/Facebook_kcgpqx.png"
                   }
-                  target="_blank"
-                  href="https://www.facebook.com/italianobros.enterprise/"
                   alt="facebook"
+                  className={layoutStyles.mb__img}
                 />
-              </li>
-              <li>
+              </a>
+            </li>
+            <li className={layoutStyles.mb__li}>
+              <a
+                href="https://www.instagram.com/italianobros.enterprise/"
+                target="_blank"
+                className={layoutStyles.mb__anchor}
+              >
                 <img
+                  href="https://www.instagram.com/italianobros.enterprise/"
                   src={
                     "https://res.cloudinary.com/snackmanproductions/image/upload/v1568330393/italianobros/icons/Instagram_hp37l4.png"
                   }
-                  target="_blank"
-                  href="https://www.instagram.com/italianobros.enterprise/"
-                  alt="facebook"
+                  alt="Instagram"
+                  className={layoutStyles.mb__img}
                 />
-              </li>
-            </ul>
-          </div>
+              </a>
+            </li>
+          </ul>
         </div>
-      )
-    }
+      </div>
+    )
   }
 
   render() {
-    return (
-      <Fragment>{this.renderMobileMenu()}</Fragment>
-    )
+    return <Fragment>{this.renderMobileMenu()}</Fragment>
   }
 }

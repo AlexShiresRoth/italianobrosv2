@@ -1,8 +1,8 @@
-import React, {Fragment} from "react"
+import React, { Fragment } from "react"
 import axios from "axios"
 
 import { Modal } from "./Modal"
-import "../../style/main.css"
+import layoutStyles from "./Contact.module.scss"
 
 //TODO dry up this component
 export default class Contact extends React.Component {
@@ -129,13 +129,10 @@ export default class Contact extends React.Component {
     //mobile view
     if (this.state.isMobile) {
       return (
-        <div className="navbar__container--top-tier">
-          <div
-            className="navbar__container--bottom"
-            onClick={this.props.onClick}
-          >
-            <div className="navbar__container--bottom--heading">
-              <h2 style={{ color: "#fff" }}>Get A Quote</h2>
+        <div className={layoutStyles.cf__top__tier}>
+          <div className={layoutStyles.cf__bottom} onClick={this.props.onClick}>
+            <div className={layoutStyles.cf__heading}>
+              <h2 className={layoutStyles.cf__heading__h2}>Get A Quote</h2>
             </div>
           </div>
           <Modal
@@ -146,17 +143,28 @@ export default class Contact extends React.Component {
             response={this.state.response}
           />
           <div
-            className={`contact__form ${!this.props.toggled ? "hidden" : ""}`}
+            className={`
+              ${
+                !this.props.toggled
+                  ? layoutStyles.hidden
+                  : layoutStyles.contact__form
+              }`}
           >
             <form
-              className={`contact__form--form ${
-                !this.props.toggled ? "hidden" : ""
-              }`}
+              className={` 
+                ${
+                  !this.props.toggled
+                    ? layoutStyles.hidden
+                    : layoutStyles.cf__form
+                }`}
               onSubmit={this.formSubmit}
             >
-              <div className="input-column">
-                <label htmlFor="firstName">First Name</label>
+              <div className={layoutStyles.cf__input__column}>
+                <label className={layoutStyles.cf__label} htmlFor="firstName">
+                  First Name
+                </label>
                 <input
+                  className={layoutStyles.cf__input}
                   name="firstName"
                   id="first-name"
                   type="text"
@@ -166,9 +174,12 @@ export default class Contact extends React.Component {
                   onChange={this.handleNameInput}
                 />
               </div>
-              <div className="input-column">
-                <label htmlFor="lastName">Last Name</label>
+              <div className={layoutStyles.cf__input__column}>
+                <label className={layoutStyles.cf__label} htmlFor="lastName">
+                  Last Name
+                </label>
                 <input
+                  className={layoutStyles.cf__input}
                   name="lastName"
                   id="last-name"
                   type="text"
@@ -178,9 +189,12 @@ export default class Contact extends React.Component {
                   required
                 />
               </div>
-              <div className="input-column">
-                <label htmlFor="email">Email</label>
+              <div className={layoutStyles.cf__input__column}>
+                <label className={layoutStyles.cf__label} htmlFor="email">
+                  Email
+                </label>
                 <input
+                  className={layoutStyles.cf__input}
                   name="email"
                   id="email"
                   type="text"
@@ -190,9 +204,12 @@ export default class Contact extends React.Component {
                   required
                 />
               </div>
-              <div className="input-column">
-                <label htmlFor="phone">Phone</label>
+              <div className={layoutStyles.cf__input__column}>
+                <label className={layoutStyles.cf__label} htmlFor="phone">
+                  Phone
+                </label>
                 <input
+                  className={layoutStyles.cf__input}
                   name="phone"
                   id="phone"
                   type="tel"
@@ -203,9 +220,12 @@ export default class Contact extends React.Component {
                   required
                 />
               </div>
-              <div className="input-column">
-                <label htmlFor="message">Message</label>
+              <div className={layoutStyles.cf__input__column}>
+                <label className={layoutStyles.cf__label} htmlFor="message">
+                  Message
+                </label>
                 <input
+                  className={layoutStyles.cf__input}
                   name="message"
                   id="message"
                   type="text"
@@ -215,8 +235,8 @@ export default class Contact extends React.Component {
                   required
                 />
               </div>
-              <div className="input-column">
-                <button onSubmit={this.formSubmit}>Get A Quote</button>
+              <div className={layoutStyles.cf__input__column}>
+                <button className={layoutStyles.cf__button} onSubmit={this.formSubmit}>Get A Quote</button>
               </div>
             </form>
           </div>

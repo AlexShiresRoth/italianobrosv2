@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Fragment} from "react"
 import { Link } from "gatsby"
 
 import NavMenu from "./NavMenu"
@@ -6,7 +6,7 @@ import Contact from "./Contact"
 import MobileMenu from "./MobileMenu"
 import { ServiceMenu } from "./ServiceMenu"
 
-import "../../style/main.css"
+import layoutStyles from './Nav.module.scss'
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -30,12 +30,12 @@ export default class Nav extends React.Component {
   // if nav menu is open on resize, close out
   handleWindowResizeWithToggledMenu() {
     if (this.state.toggled && !this.state.isMobile) {
-      this.setState({ toggled: false })
+      this.setState({ toggled: !this.state.toggled })
     }
   }
   toggleNav = () => {
     this.state.toggled
-      ? this.setState({ toggled: false })
+      ? this.setState({ toggled: !this.state.toggled })
       : this.setState({ toggled: true, contactToggled: false })
   }
 
@@ -84,22 +84,22 @@ export default class Nav extends React.Component {
   render() {
     const renderMobileNavbar = () => {
       return (
-        <nav className="navbar__container">
-          <div className="navbar__container--top">
+        <nav className={layoutStyles.navbar__container} style={{ height: "0vh" }}>
+          <div className={layoutStyles.nb__top}>
             <NavMenu onClick={this.toggleNav} toggled={this.state.toggled} />
 
-            <div className="logo__nav">
+            <div className={layoutStyles.nb__logo__nav}>
               <Link to="/">
                 <img
                   src={
                     "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
                   }
                   alt="italiano bros logo"
+                  className={layoutStyles.nb__image}
                 />
               </Link>
             </div>
-
-            <div className="nav__right" />
+            <div/>
           </div>
 
           <Contact
@@ -121,10 +121,7 @@ export default class Nav extends React.Component {
               <div className="navbar__container--top--desktop--left">
                 <ul>
                   <div className="navbar__container--top--desktop--left--nav-item">
-                    <Link
-                      to="/"
-                      style={{ textDecoration: "none" }}
-                    >
+                    <Link to="/" style={{ textDecoration: "none" }}>
                       <li className="links">Home</li>
                     </Link>
                   </div>
@@ -188,12 +185,12 @@ export default class Nav extends React.Component {
     }
     //mobile nav
     if (this.state.isMobile) {
-      return renderMobileNavbar()
+      return <Fragment>{renderMobileNavbar()}</Fragment>
     }
 
     //desktop nav menu
     else {
-      return renderWideNav()
+      return <Fragment>{renderWideNav()}</Fragment>
     }
   }
 }

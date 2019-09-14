@@ -1,0 +1,96 @@
+@media screen and (min-width: 900px) {
+  .about__section__desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .about__desktop__img {
+    height: 35rem;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about__desktop__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2rem;
+  }
+  .about__desktop__h1 {
+    font-size: 2rem;
+    color: #707070;
+    max-width: 80rem;
+  }
+  .about__desktop__hr {
+    height: 0;
+    border-top: 1px solid #CEB862;
+    width: 6rem;
+    margin: 1rem 0;
+  }
+  .center {
+    max-width: 50vw;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 100%;
+  }
+  .about__desktop__paragraph__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 1.5rem 0;
+  }
+  .about__desktop__paragraph {
+    font-size: 1.25rem;
+    color: #707070;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  .button {
+    border: 2px solid #CEB862;
+    background: transparent;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 3.2rem;
+    width: 20rem;
+  }
+  .button:hover {
+    cursor: pointer;
+    background: #CEB862;
+    color: #fff;
+  }
+}
+/*# sourceMappingURL=AboutDesktop.module.css.map */

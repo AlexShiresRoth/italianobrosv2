@@ -1,0 +1,96 @@
+.nb__icon {
+  height: 1.6rem;
+  width: 2.7rem;
+  border-radius: 5px;
+  display: block;
+  -webkit-transition: all 0s ease;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  position: relative;
+}
+
+.nb__icon:hover {
+  cursor: pointer;
+}
+
+.nb__line:nth-child(1) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.nb__line:nth-child(2) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 0.8rem;
+}
+
+.nb__line:nth-child(3) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 1.6rem;
+}
+
+.nb__line__rotated:nth-child(1) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: .1rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg) translateY(1.1rem);
+}
+
+.nb__line__cleared:nth-child(2) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 0.8rem;
+  opacity: 0;
+  transform: translateX(-40vw);
+  -webkit-transform: translateX(-40vw);
+}
+
+.nb__line__rotated:nth-child(3) {
+  height: 2px;
+  background: #CEB862;
+  border-radius: 0.5px;
+  width: 100%;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  display: block;
+  top: 1.6rem;
+  left: .1rem;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg) translateY(-1rem);
+}
+/*# sourceMappingURL=NavMenu.module.css.map */
