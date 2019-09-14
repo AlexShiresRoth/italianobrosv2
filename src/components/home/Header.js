@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Media from "react-media"
 
 import layoutStyles from "./Header.module.scss"
 import wideScreenLayoutStyles from "./HeaderDesktop.module.scss"
@@ -14,9 +15,7 @@ export default class Header extends React.Component {
   }
 
   handleWindowResize = () => {
-    setTimeout(() => {
-      this.setState({ isMobile: window.innerWidth < 600 })
-    },1)
+    this.setState({ isMobile: window.innerWidth < 600 })
   }
 
   componentDidMount() {
@@ -30,37 +29,39 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <header className={layoutStyles.header__section}>
-        <div className={layoutStyles.overlay} />
-        <div
-          className={
-            this.state.isMobile
-              ? layoutStyles.herobox
-              : wideScreenLayoutStyles.herobox
-          }
-        >
-          <h1
+      <Media query={{ maxWidth: "600px" }}>
+        <header className={layoutStyles.header__section}>
+          <div className={layoutStyles.overlay} />
+          <div
             className={
               this.state.isMobile
-                ? layoutStyles.heading
-                : wideScreenLayoutStyles.heading
+                ? layoutStyles.herobox
+                : wideScreenLayoutStyles.herobox
             }
           >
-            Broad Vision. Careful Thought. Handcrafted Design.
-          </h1>
-          <Link to={"/Services"}>
-            <button
+            <h1
               className={
                 this.state.isMobile
-                  ? layoutStyles.button
-                  : wideScreenLayoutStyles.button
+                  ? layoutStyles.heading
+                  : wideScreenLayoutStyles.heading
               }
             >
-              Learn More
-            </button>
-          </Link>
-        </div>
-      </header>
+              Broad Vision. Careful Thought. Handcrafted Design.
+            </h1>
+            <Link to={"/Services"}>
+              <button
+                className={
+                  this.state.isMobile
+                    ? layoutStyles.button
+                    : wideScreenLayoutStyles.button
+                }
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </header>
+      </Media>
     )
   }
 }
