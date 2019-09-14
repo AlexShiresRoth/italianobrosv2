@@ -9,7 +9,7 @@ export default class Header extends React.Component {
     super(props)
 
     this.state = {
-      isMobile: window.innerWidth > 600,
+      isMobile: false,
     }
   }
 
