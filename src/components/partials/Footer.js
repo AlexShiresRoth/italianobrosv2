@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
+import Media from "react-media"
 
 import Social from "./Social"
 
-import "../../style/main.css"
+import layoutStyles from "./Footer.module.scss"
+import wideScreenLayoutStyles from "./FooterDesktop.module.scss"
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -26,10 +28,6 @@ export default class Footer extends React.Component {
     }
   }
 
-  getWindowSize = () => {
-    return window.innerWidth
-  }
-
   handleWindowResize = () => {
     this.setState({ isMobile: window.innerWidth < 600 })
   }
@@ -44,138 +42,183 @@ export default class Footer extends React.Component {
   }
 
   render() {
-    if (this.state.isMobile) {
-      return (
-        <footer className="footer__section">
-          <div className="footer__section--container">
-            <div className="footer__section--container--column--left">
-              <p>Follow Us</p>
-              <Social icons={this.state.gallery} />
-              <p>Contact Us</p>
-              <a href="tel:+1-631.218.3641">631.218.3641</a>
-              <a href="mailto:italianoenterprise@gmail.com">
-                italianoenterprise@gmail.com
-              </a>
+    return (
+      <>
+        <Media query={{ maxWidth: "600px" }}>
+          <footer className={layoutStyles.footer__section}>
+            <div className={layoutStyles.f__container}>
+              <div className={layoutStyles.f__left}>
+                <p className={layoutStyles.f__left__p}>Follow Us</p>
+                <Social icons={this.state.gallery} />
+                <p className={layoutStyles.f__left__p}>Contact Us</p>
+                <a
+                  className={layoutStyles.f__left__anchor}
+                  href="tel:+1-631.218.3641"
+                >
+                  631.218.3641
+                </a>
+                <a
+                  className={layoutStyles.f__left__anchor}
+                  href="mailto:italianoenterprise@gmail.com"
+                >
+                  italianoenterprise@gmail.com
+                </a>
+              </div>
+              <div className={layoutStyles.f__right}>
+                <ul className={layoutStyles.f__right__ul}>
+                  <Link
+                    to="/"
+                    style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  >
+                    <li className={layoutStyles.f__right__li}>Home</li>
+                  </Link>
+                  <Link
+                    to="/Services"
+                    style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  >
+                    <li className={layoutStyles.f__right__li}>Services</li>
+                  </Link>
+                  <Link
+                    to="/OurWork"
+                    style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  >
+                    <li className={layoutStyles.f__right__li}>Our Work</li>
+                  </Link>
+                  <Link
+                    to="/About"
+                    style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  >
+                    <li className={layoutStyles.f__right__li}>About</li>
+                  </Link>
+
+                  <Link
+                    to="/Location"
+                    style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  >
+                    <li className={layoutStyles.f__right__li}>Contact</li>
+                  </Link>
+                </ul>
+              </div>
             </div>
-            <div className="footer__section--container--column--right">
-              <ul>
+            <div className={layoutStyles.f__logo__copyright__container}>
+              <div className={layoutStyles.f__logo}>
+                <img
+                  src={
+                    "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323260/italianobros/logos/White_jbjrkt.png"
+                  }
+                  alt="logo"
+                  className={layoutStyles.f__logo__img}
+                />
+              </div>
+              <p className={layoutStyles.f__logo__p}>
+                &copy; italiano bros enterprise
+              </p>
+            </div>
+          </footer>
+        </Media>
+
+        <Media query={{ minWidth: "601px" }}>
+          <footer className={wideScreenLayoutStyles.footer__desktop}>
+            <div className={wideScreenLayoutStyles.f__logo__copyright__desktop}>
+              <div
+                className={
+                  wideScreenLayoutStyles.f__logo__copyright__desktop__container
+                }
+              >
+                <img
+                  src={
+                    "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323260/italianobros/logos/White_jbjrkt.png"
+                  }
+                  alt="logo"
+                  className={wideScreenLayoutStyles.f__logo__desktop}
+                />
+              </div>
+              <p
+                className={
+                  wideScreenLayoutStyles.f__logo__copyright__desktop__p
+                }
+              >
+                &copy; italiano bros enterprise
+              </p>
+            </div>
+            <div className={wideScreenLayoutStyles.f__desktop__middle}>
+              <div className={wideScreenLayoutStyles.f__desktop__middle__top}>
+                <h5 className={wideScreenLayoutStyles.f__desktop__middle__h5}>
+                  Follow Us
+                </h5>
+                <Social icons={this.state.gallery} />
+              </div>
+              <div
+                className={wideScreenLayoutStyles.f__desktop__middle__bottom}
+              >
+                <h5 className={wideScreenLayoutStyles.f__desktop__bottom__h5}>
+                  Contact Us
+                </h5>
+                <p className={wideScreenLayoutStyles.f__desktop__bottom__p}>
+                  <a
+                    className={wideScreenLayoutStyles.f__desktop__bottom__a}
+                    href="tel:+1-631.218.3641"
+                  >
+                    631.218.3641
+                  </a>
+                </p>
+                <p className={wideScreenLayoutStyles.f__desktop__bottom__p}>
+                  <a
+                    className={wideScreenLayoutStyles.f__desktop__bottom__a}
+                    href="mailto:italianoenterprise@gmail.com"
+                  >
+                    italianoenterprise@gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className={wideScreenLayoutStyles.f__desktop__right}>
+              <ul className={wideScreenLayoutStyles.f__desktop__right__ul}>
                 <Link
                   to="/"
-                  style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  style={{ textDecoration: "none", fontSize: "1.5rem" }}
                 >
-                  <li className="links">Home</li>
+                  <li className={wideScreenLayoutStyles.f__desktop__right__li}>
+                    Home
+                  </li>
                 </Link>
                 <Link
                   to="/services"
-                  style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  style={{ textDecoration: "none", fontSize: "1.5rem" }}
                 >
-                  <li className="links">Services</li>
+                  <li className={wideScreenLayoutStyles.f__desktop__right__li}>
+                    Services
+                  </li>
                 </Link>
                 <Link
                   to="/showcase"
                   style={{ textDecoration: "none", fontSize: "1.1rem" }}
                 >
-                  <li className="links">Our Work</li>
+                  <li className={wideScreenLayoutStyles.f__desktop__right__li}>
+                    Our Work
+                  </li>
                 </Link>
                 <Link
                   to="/ourstory"
-                  style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  style={{ textDecoration: "none", fontSize: "1.5rem" }}
                 >
-                  <li className="links">About</li>
+                  <li className={wideScreenLayoutStyles.f__desktop__right__li}>
+                    About
+                  </li>
                 </Link>
-
                 <Link
                   to="/location"
-                  style={{ textDecoration: "none", fontSize: "1.1rem" }}
+                  style={{ textDecoration: "none", fontSize: "1.5rem" }}
                 >
-                  <li className="links">Contact</li>
+                  <li className={wideScreenLayoutStyles.f__desktop__right__li}>
+                    Contact
+                  </li>
                 </Link>
               </ul>
             </div>
-          </div>
-          <div className="logo-copyright__container">
-            <div className="logo-copyright__container--footer-logo">
-              <img
-                src={
-                  "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323260/italianobros/logos/White_jbjrkt.png"
-                }
-                alt="logo"
-              />
-            </div>
-            <p>&copy; italiano bros enterprise</p>
-          </div>
-        </footer>
-      )
-    }
-
-    //desktop layout
-    else {
-      return (
-        <footer className="footer__section--desktop">
-          <div className="logo-copyright__container--desktop">
-            <div className="logo-copyright__container--desktop--footer-logo">
-              <img
-                src={
-                  "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323260/italianobros/logos/White_jbjrkt.png"
-                }
-                alt="logo"
-              />
-            </div>
-            <p>&copy; italiano bros enterprise</p>
-          </div>
-          <div className="footer__section--desktop--column--middle">
-            <div className="footer__section--desktop--column--middle--top">
-              <h5>Follow Us</h5>
-              <Social icons={this.state.gallery} />
-            </div>
-            <div className="footer__section--desktop--column--middle--bottom">
-              <h5>Contact Us</h5>
-              <p>
-                <a href="tel:+1-631.218.3641">631.218.3641</a>
-              </p>
-              <p>
-                <a href="mailto:italianoenterprise@gmail.com">
-                  italianoenterprise@gmail.com
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="footer__section--desktop--column--right">
-            <ul>
-              <Link
-                to="/"
-                style={{ textDecoration: "none", fontSize: "1.5rem" }}
-              >
-                <li className="links">Home</li>
-              </Link>
-              <Link
-                to="/services"
-                style={{ textDecoration: "none", fontSize: "1.5rem" }}
-              >
-                <li className="links">Services</li>
-              </Link>
-              <Link
-                to="/showcase"
-                style={{ textDecoration: "none", fontSize: "1.1rem" }}
-              >
-                <li className="links">Our Work</li>
-              </Link>
-              <Link
-                to="/ourstory"
-                style={{ textDecoration: "none", fontSize: "1.5rem" }}
-              >
-                <li className="links">About</li>
-              </Link>
-              <Link
-                to="/location"
-                style={{ textDecoration: "none", fontSize: "1.5rem" }}
-              >
-                <li className="links">Contact</li>
-              </Link>
-            </ul>
-          </div>
-        </footer>
-      )
-    }
+          </footer>
+        </Media>
+      </>
+    )
   }
 }

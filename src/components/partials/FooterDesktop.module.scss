@@ -1,0 +1,167 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+@media screen and (min-width: 900px) {
+  .footer__desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    background: $dark-color;
+    padding: 4rem;
+  }
+  .f__desktop__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 1rem;
+    height: 100%;
+  }
+  .f__desktop__middle {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .f__desktop__middle__top {
+    margin: 4rem 0;
+  }
+  .f__desktop__middle__h5 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond";
+  }
+
+  .f__dekstop__middle__p {
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  .f__desktop__bottom {
+    margin: 4rem 0;
+  }
+  .f__desktop__bottom__h5 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond";
+  }
+
+  .f__desktop__bottom__p {
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+  .f__desktop__bottom__a {
+    color: $gold-color;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Cormorant Garamond";
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $gold-color;
+      cursor: pointer;
+    }
+  }
+
+  .f__desktop__right {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .f__desktop__right__h5 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond";
+  }
+  .f__desktop__right__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 80%;
+    margin: 2rem 0;
+  }
+  .f__desktop__right__li {
+    list-style: none;
+    font-family: "Cormorant Garamond";
+    color: $gold-color;
+  }
+}
+
+.f__logo__copyright__desktop {
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  margin: 2rem 0;
+}
+.f__logo__copyright__desktop__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6rem;
+  width: 17rem;
+  margin: 1rem;
+}
+.f__logo__desktop {
+  height: 100%;
+  width: 100%;
+}
+
+.f__logo__copyright__desktop__p {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0.8rem;
+}
+
+.f__desktop__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20%;
+  height: 5rem;
+}
+.f__desktop__icon {
+  -o-object-fit: cover;
+  object-fit: cover;
+}

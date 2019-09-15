@@ -1,31 +1,31 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import '../../style/main.css';
+import layoutStyles from './ServiceMenu.module.scss';
 
 //fix hash route
 export const ServiceMenu = props => {
 	return (
-		<div className={`service__menu ${props.toggled ? 'fadeInMenu' : ''}`}>
-			<ul className="service__menu--service-list">
-				<Link to={'/services#venetian-plaster'} style={{ textDecoration: 'none', width: '100%' }}>
-					<li>Venetian Plaster</li>
+		<div className={`${layoutStyles.service__menu} ${props.toggled ? layoutStyles.fadeInMenu : ''}`}>
+			<ul className={layoutStyles.sm__list}>
+				<Link to={'/Services#venetian-plaster'} style={{ textDecoration: 'none', width: '100%' }}>
+					<li className={layoutStyles.sm__li}>Venetian Plaster</li>
 				</Link>
 
-				<Link to={'/services#plaster-mouldings'} style={{ textDecoration: 'none', width: '100%' }}>
-					<li> Plaster Mouldings</li>
+				<Link to={'/Services#plaster-mouldings'} style={{ textDecoration: 'none', width: '100%' }}>
+					<li className={layoutStyles.sm__li}> Plaster Mouldings</li>
 				</Link>
 
-				<Link to={'/services#stucco'} style={{ textDecoration: 'none', width: '100%' }}>
-					<li>Stucco</li>
+				<Link to={'/Services#stucco'} style={{ textDecoration: 'none', width: '100%' }}>
+					<li className={layoutStyles.sm__li}>Stucco</li>
 				</Link>
 
-				<Link to={'/services#drywall'} style={{ textDecoration: 'none', width: '100%' }}>
-					<li>Drywall</li>
+				<Link to={'/Services#drywall'} style={{ textDecoration: 'none', width: '100%' }}>
+					<li className={layoutStyles.sm__li}>Drywall</li>
 				</Link>
 
-				<Link to={'/services#concrete'} style={{ textDecoration: 'none', width: '100%' }}>
-					<li>Concrete</li>
+				<Link to={'/Services#concrete'} style={{ textDecoration: 'none', width: '100%' }}>
+					<li className={layoutStyles.sm__li}>Concrete</li>
 				</Link>
 			</ul>
 		</div>
