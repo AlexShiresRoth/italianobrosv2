@@ -122,216 +122,233 @@ export default class Contact extends React.Component {
     return (
       <Fragment>
         <Media query={{ maxWidth: "600px" }}>
-          <div className={layoutStyles.cf__top__tier}>
-            <div
-              className={layoutStyles.cf__bottom}
-              onClick={this.props.onClick}
-            >
-              <div className={layoutStyles.cf__heading}>
-                <h2 className={layoutStyles.cf__heading__h2}>Get A Quote</h2>
-              </div>
-            </div>
-            <Modal
-              status={this.state.sent}
-              onClick={this.modalClose}
-              modalCase={this.state.openModal}
-              closeContact={this.props.onClick}
-              response={this.state.response}
-            />
-            <div
-              className={`
+          {matches =>
+            matches ? (
+              <div className={layoutStyles.cf__top__tier}>
+                <div
+                  className={layoutStyles.cf__bottom}
+                  onClick={this.props.onClick}
+                >
+                  <div className={layoutStyles.cf__heading}>
+                    <h2 className={layoutStyles.cf__heading__h2}>
+                      Get A Quote
+                    </h2>
+                  </div>
+                </div>
+                <Modal
+                  status={this.state.sent}
+                  onClick={this.modalClose}
+                  modalCase={this.state.openModal}
+                  closeContact={this.props.onClick}
+                  response={this.state.response}
+                />
+                <div
+                  className={`
               ${
                 !this.props.toggled
                   ? layoutStyles.hidden
                   : layoutStyles.contact__form
               }`}
-            >
-              <form
-                className={` 
+                >
+                  <form
+                    className={` 
                 ${
                   !this.props.toggled
                     ? layoutStyles.hidden
                     : layoutStyles.cf__form
                 }`}
-                onSubmit={this.formSubmit}
-              >
-                <div className={layoutStyles.cf__input__column}>
-                  <label className={layoutStyles.cf__label} htmlFor="firstName">
-                    First Name
-                  </label>
-                  <input
-                    className={layoutStyles.cf__input}
-                    name="firstName"
-                    id="first-name"
-                    type="text"
-                    placeholder="Enter First Name"
-                    required
-                    value={this.state.firstName}
-                    onChange={this.handleNameInput}
-                  />
-                </div>
-                <div className={layoutStyles.cf__input__column}>
-                  <label className={layoutStyles.cf__label} htmlFor="lastName">
-                    Last Name
-                  </label>
-                  <input
-                    className={layoutStyles.cf__input}
-                    name="lastName"
-                    id="last-name"
-                    type="text"
-                    placeholder="Enter Last Name"
-                    value={this.state.lasttName}
-                    onChange={this.handleLastNameInput}
-                    required
-                  />
-                </div>
-                <div className={layoutStyles.cf__input__column}>
-                  <label className={layoutStyles.cf__label} htmlFor="email">
-                    Email
-                  </label>
-                  <input
-                    className={layoutStyles.cf__input}
-                    name="email"
-                    id="email"
-                    type="text"
-                    placeholder="Enter Email"
-                    value={this.state.email}
-                    onChange={this.handleEmailInput}
-                    required
-                  />
-                </div>
-                <div className={layoutStyles.cf__input__column}>
-                  <label className={layoutStyles.cf__label} htmlFor="phone">
-                    Phone
-                  </label>
-                  <input
-                    className={layoutStyles.cf__input}
-                    name="phone"
-                    id="phone"
-                    type="tel"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="Enter Phone"
-                    value={this.state.phone}
-                    onChange={this.handlePhoneInput}
-                    required
-                  />
-                </div>
-                <div className={layoutStyles.cf__input__column}>
-                  <label className={layoutStyles.cf__label} htmlFor="message">
-                    Message
-                  </label>
-                  <input
-                    className={layoutStyles.cf__input}
-                    name="message"
-                    id="message"
-                    type="text"
-                    placeholder="Enter Message"
-                    value={this.state.message}
-                    onChange={this.handleMessageInput}
-                    required
-                  />
-                </div>
-                <div className={layoutStyles.cf__input__column}>
-                  <button
-                    className={layoutStyles.cf__button}
                     onSubmit={this.formSubmit}
                   >
-                    Get A Quote
-                  </button>
+                    <div className={layoutStyles.cf__input__column}>
+                      <label
+                        className={layoutStyles.cf__label}
+                        htmlFor="firstName"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        className={layoutStyles.cf__input}
+                        name="firstName"
+                        id="first-name"
+                        type="text"
+                        placeholder="Enter First Name"
+                        required
+                        value={this.state.firstName}
+                        onChange={this.handleNameInput}
+                      />
+                    </div>
+                    <div className={layoutStyles.cf__input__column}>
+                      <label
+                        className={layoutStyles.cf__label}
+                        htmlFor="lastName"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        className={layoutStyles.cf__input}
+                        name="lastName"
+                        id="last-name"
+                        type="text"
+                        placeholder="Enter Last Name"
+                        value={this.state.lasttName}
+                        onChange={this.handleLastNameInput}
+                        required
+                      />
+                    </div>
+                    <div className={layoutStyles.cf__input__column}>
+                      <label className={layoutStyles.cf__label} htmlFor="email">
+                        Email
+                      </label>
+                      <input
+                        className={layoutStyles.cf__input}
+                        name="email"
+                        id="email"
+                        type="text"
+                        placeholder="Enter Email"
+                        value={this.state.email}
+                        onChange={this.handleEmailInput}
+                        required
+                      />
+                    </div>
+                    <div className={layoutStyles.cf__input__column}>
+                      <label className={layoutStyles.cf__label} htmlFor="phone">
+                        Phone
+                      </label>
+                      <input
+                        className={layoutStyles.cf__input}
+                        name="phone"
+                        id="phone"
+                        type="tel"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="Enter Phone"
+                        value={this.state.phone}
+                        onChange={this.handlePhoneInput}
+                        required
+                      />
+                    </div>
+                    <div className={layoutStyles.cf__input__column}>
+                      <label
+                        className={layoutStyles.cf__label}
+                        htmlFor="message"
+                      >
+                        Message
+                      </label>
+                      <input
+                        className={layoutStyles.cf__input}
+                        name="message"
+                        id="message"
+                        type="text"
+                        placeholder="Enter Message"
+                        value={this.state.message}
+                        onChange={this.handleMessageInput}
+                        required
+                      />
+                    </div>
+                    <div className={layoutStyles.cf__input__column}>
+                      <button
+                        className={layoutStyles.cf__button}
+                        onSubmit={this.formSubmit}
+                      >
+                        Get A Quote
+                      </button>
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
-          </div>
-        </Media>
-        <Media query={{ minWidth: "601px" }}>
-          <div className="navbar__container--top-tier--desktop">
-            <Modal
-              status={this.state.sent}
-              onClick={this.modalClose}
-              modalCase={this.state.openModal}
-              closeContact={this.props.onClick}
-              response={this.state.response}
-            />
-            <div className="navbar__container--top-tier--desktop--left">
-              <div className="navbar__container--top-tier--desktop--left--inner">
-                <h2>Broad Vision.</h2>
-                <h2>Careful Thought.</h2>
-                <h2>Handcrafted Design.</h2>
               </div>
-            </div>
-            <div className="navbar__container--top-tier--desktop--right">
-              <form className="contact__form--form" onSubmit={this.formSubmit}>
-                <div className="contact__form--form--left">
-                  <div className="input-column">
-                    <label htmlFor="firstName">First Name</label>
-                    <input
-                      name="firstName"
-                      id="first-name"
-                      type="text"
-                      placeholder="Enter First Name"
-                      required
-                      value={this.state.firstName}
-                      onChange={this.handleNameInput}
-                    />
-                  </div>
-                  <div className="input-column">
-                    <label htmlFor="lastName">Last Name</label>
-                    <input
-                      name="lastName"
-                      id="last-name"
-                      type="text"
-                      placeholder="Enter Last Name"
-                      value={this.state.lasttName}
-                      onChange={this.handleLastNameInput}
-                      required
-                    />
-                  </div>
-                  <div className="input-column">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      name="email"
-                      id="email"
-                      type="text"
-                      placeholder="Enter Email"
-                      value={this.state.email}
-                      onChange={this.handleEmailInput}
-                      required
-                    />
+            ) : (
+              <div className="navbar__container--top-tier--desktop">
+                <Modal
+                  status={this.state.sent}
+                  onClick={this.modalClose}
+                  modalCase={this.state.openModal}
+                  closeContact={this.props.onClick}
+                  response={this.state.response}
+                />
+                <div className="navbar__container--top-tier--desktop--left">
+                  <div className="navbar__container--top-tier--desktop--left--inner">
+                    <h2>Broad Vision.</h2>
+                    <h2>Careful Thought.</h2>
+                    <h2>Handcrafted Design.</h2>
                   </div>
                 </div>
-                <div className="contact__form--form--right">
-                  <div className="input-column">
-                    <label htmlFor="phone">Phone</label>
-                    <input
-                      name="phone"
-                      id="phone"
-                      type="tel"
-                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                      placeholder="555-555-5555"
-                      value={this.state.phone}
-                      onChange={this.handlePhoneInput}
-                      required
-                    />
-                  </div>
-                  <div className="input-column">
-                    <label htmlFor="message">Message</label>
-                    <input
-                      name="message"
-                      id="message"
-                      type="text"
-                      placeholder="Enter Message"
-                      value={this.state.message}
-                      onChange={this.handleMessageInput}
-                      required
-                    />
-                  </div>
-                  <div className="input-column">
-                    <button onSubmit={this.formSubmit}>Get A Quote</button>
-                  </div>
+                <div className="navbar__container--top-tier--desktop--right">
+                  <form
+                    className="contact__form--form"
+                    onSubmit={this.formSubmit}
+                  >
+                    <div className="contact__form--form--left">
+                      <div className="input-column">
+                        <label htmlFor="firstName">First Name</label>
+                        <input
+                          name="firstName"
+                          id="first-name"
+                          type="text"
+                          placeholder="Enter First Name"
+                          required
+                          value={this.state.firstName}
+                          onChange={this.handleNameInput}
+                        />
+                      </div>
+                      <div className="input-column">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input
+                          name="lastName"
+                          id="last-name"
+                          type="text"
+                          placeholder="Enter Last Name"
+                          value={this.state.lasttName}
+                          onChange={this.handleLastNameInput}
+                          required
+                        />
+                      </div>
+                      <div className="input-column">
+                        <label htmlFor="email">Email</label>
+                        <input
+                          name="email"
+                          id="email"
+                          type="text"
+                          placeholder="Enter Email"
+                          value={this.state.email}
+                          onChange={this.handleEmailInput}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="contact__form--form--right">
+                      <div className="input-column">
+                        <label htmlFor="phone">Phone</label>
+                        <input
+                          name="phone"
+                          id="phone"
+                          type="tel"
+                          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                          placeholder="555-555-5555"
+                          value={this.state.phone}
+                          onChange={this.handlePhoneInput}
+                          required
+                        />
+                      </div>
+                      <div className="input-column">
+                        <label htmlFor="message">Message</label>
+                        <input
+                          name="message"
+                          id="message"
+                          type="text"
+                          placeholder="Enter Message"
+                          value={this.state.message}
+                          onChange={this.handleMessageInput}
+                          required
+                        />
+                      </div>
+                      <div className="input-column">
+                        <button onSubmit={this.formSubmit}>Get A Quote</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-              </form>
-            </div>
-          </div>
+              </div>
+            )
+          }
         </Media>
       </Fragment>
     )

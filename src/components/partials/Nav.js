@@ -88,105 +88,129 @@ export default class Nav extends React.Component {
     return (
       <Fragment>
         <Media query={{ maxWidth: "600px" }}>
-          <nav
-            className={layoutStyles.navbar__container}
-            style={{ height: "0vh" }}
-          >
-            <div className={layoutStyles.nb__top}>
-              <NavMenu onClick={this.toggleNav} toggled={this.state.toggled} />
-
-              <div className={layoutStyles.nb__logo__nav}>
-                <Link to="/">
-                  <img
-                    src={
-                      "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
-                    }
-                    alt="italiano bros logo"
-                    className={layoutStyles.nb__image}
+          {matches =>
+            matches ? (
+              <nav
+                className={layoutStyles.navbar__container}
+                style={{ height: "0vh" }}
+              >
+                <div className={layoutStyles.nb__top}>
+                  <NavMenu
+                    onClick={this.toggleNav}
+                    toggled={this.state.toggled}
                   />
-                </Link>
-              </div>
-              <div />
-            </div>
 
-            <Contact
-              onClick={this.contactToggle}
-              toggled={this.state.contactToggled}
-              isMobile={this.state.isMobile}
-            />
+                  <div className={layoutStyles.nb__logo__nav}>
+                    <Link to="/">
+                      <img
+                        src={
+                          "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
+                        }
+                        alt="italiano bros logo"
+                        className={layoutStyles.nb__image}
+                      />
+                    </Link>
+                  </div>
+                  <div />
+                </div>
 
-            <MobileMenu toggled={this.state.toggled} />
-          </nav>
-        </Media>
+                <Contact
+                  onClick={this.contactToggle}
+                  toggled={this.state.contactToggled}
+                  isMobile={this.state.isMobile}
+                />
 
-        <Media query={{ minWidth: "601px" }}>
-          <nav className={wideScreenLayoutStyles.dt__navbar__container}>
-            <div className={wideScreenLayoutStyles.dt__top}>
-              <div className={wideScreenLayoutStyles.dt__top__tier}>
-                <div>
-                  <ul className={wideScreenLayoutStyles.dt__ul}>
-                    <div className={wideScreenLayoutStyles.dt__nav__item}>
-                      <Link to="/" style={{ textDecoration: "none" }}>
-                        <li className={wideScreenLayoutStyles.dt__li}>Home</li>
+                <MobileMenu toggled={this.state.toggled} />
+              </nav>
+            ) : (
+              <nav className={wideScreenLayoutStyles.dt__navbar__container}>
+                <div className={wideScreenLayoutStyles.dt__top}>
+                  <div className={wideScreenLayoutStyles.dt__top__tier}>
+                    <div>
+                      <ul className={wideScreenLayoutStyles.dt__ul}>
+                        <div className={wideScreenLayoutStyles.dt__nav__item}>
+                          <Link to="/" style={{ textDecoration: "none" }}>
+                            <li className={wideScreenLayoutStyles.dt__li}>
+                              Home
+                            </li>
+                          </Link>
+                        </div>
+                        <div
+                          className={wideScreenLayoutStyles.dt__nav__item}
+                          onMouseEnter={() => this.renderServicesHoverMenu()}
+                          onMouseLeave={() => this.removeServicesHoverMenu()}
+                          style={{ position: "relative" }}
+                        >
+                          <Link
+                            to="/Services"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <li className={wideScreenLayoutStyles.dt__li}>
+                              Services
+                            </li>
+                          </Link>
+                          {this.state.serviceToggle ? (
+                            <ServiceMenu toggled={this.state.serviceToggle} />
+                          ) : null}
+                        </div>
+                        <div className={wideScreenLayoutStyles.dt__nav__item}>
+                          <Link
+                            to="/OurWork"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <li className={wideScreenLayoutStyles.dt__li}>
+                              Our Work
+                            </li>
+                          </Link>
+                        </div>
+                        <div className={wideScreenLayoutStyles.dt__nav__item}>
+                          <Link to="/About" style={{ textDecoration: "none" }}>
+                            <li className={wideScreenLayoutStyles.dt__li}>
+                              About
+                            </li>
+                          </Link>
+                        </div>
+                        <div className={wideScreenLayoutStyles.dt__nav__item}>
+                          <Link
+                            to="/Location"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <li className={wideScreenLayoutStyles.dt__li}>
+                              Contact
+                            </li>
+                          </Link>
+                        </div>
+                      </ul>
+                    </div>
+                    <div className={wideScreenLayoutStyles.dt__logo__nav}>
+                      <Link to="/">
+                        <img
+                          src={
+                            "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
+                          }
+                          alt="italiano bros logo"
+                          className={wideScreenLayoutStyles.dt__logo__nav}
+                        />
                       </Link>
                     </div>
-                    <div
-                      className={wideScreenLayoutStyles.dt__nav__item}
-                      onMouseEnter={() => this.renderServicesHoverMenu()}
-                      onMouseLeave={() => this.removeServicesHoverMenu()}
-                      style={{ position: "relative" }}
-                    >
-                      <Link to="/Services" style={{ textDecoration: "none" }}>
-                        <li className={wideScreenLayoutStyles.dt__li}>Services</li>
-                      </Link>
-                      {this.state.serviceToggle ? (
-                        <ServiceMenu toggled={this.state.serviceToggle} />
-                      ) : null}
+                    <div>
+                      <button
+                        className={wideScreenLayoutStyles.dt__button}
+                        onClick={this.contactToggle}
+                      >
+                        {!this.state.contactToggled ? `Get A Quote` : `Close`}
+                      </button>
                     </div>
-                    <div className={wideScreenLayoutStyles.dt__nav__item}>
-                      <Link to="/OurWork" style={{ textDecoration: "none" }}>
-                        <li className={wideScreenLayoutStyles.dt__li}>Our Work</li>
-                      </Link>
-                    </div>
-                    <div className={wideScreenLayoutStyles.dt__nav__item}>
-                      <Link to="/About" style={{ textDecoration: "none" }}>
-                        <li className={wideScreenLayoutStyles.dt__li}>About</li>
-                      </Link>
-                    </div>
-                    <div className={wideScreenLayoutStyles.dt__nav__item}>
-                      <Link to="/Location" style={{ textDecoration: "none" }}>
-                        <li className={wideScreenLayoutStyles.dt__li}>Contact</li>
-                      </Link>
-                    </div>
-                  </ul>
+                  </div>
                 </div>
-                <div className={wideScreenLayoutStyles.dt__logo__nav}>
-                  <Link to="/">
-                    <img
-                      src={
-                        "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
-                      }
-                      alt="italiano bros logo"
-                      className={wideScreenLayoutStyles.dt__logo__nav}
-                    />
-                  </Link>
-                </div>
-                <div>
-                  <button
-                    className={wideScreenLayoutStyles.dt__button}
-                    onClick={this.contactToggle}
-                  >
-                    {!this.state.contactToggled ? `Get A Quote` : `Close`}
-                  </button>
-                </div>
-              </div>
-            </div>
-            <Contact
-              onClick={this.contactToggle}
-              toggled={this.state.contactToggled}
-              isMobile={this.state.isMobile}
-            />
-          </nav>
+                <Contact
+                  onClick={this.contactToggle}
+                  toggled={this.state.contactToggled}
+                  isMobile={this.state.isMobile}
+                />
+              </nav>
+            )
+          }
         </Media>
       </Fragment>
     )

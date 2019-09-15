@@ -30,37 +30,73 @@ export default class Header extends React.Component {
   render() {
     return (
       <Media query={{ maxWidth: "600px" }}>
-        <header className={layoutStyles.header__section}>
-          <div className={layoutStyles.overlay} />
-          <div
-            className={
-              this.state.isMobile
-                ? layoutStyles.herobox
-                : wideScreenLayoutStyles.herobox
-            }
-          >
-            <h1
-              className={
-                this.state.isMobile
-                  ? layoutStyles.heading
-                  : wideScreenLayoutStyles.heading
-              }
-            >
-              Broad Vision. Careful Thought. Handcrafted Design.
-            </h1>
-            <Link to={"/Services"}>
-              <button
+        {matches =>
+          matches ? (
+            <header className={layoutStyles.header__section}>
+              <div className={layoutStyles.overlay} />
+              <div
                 className={
                   this.state.isMobile
-                    ? layoutStyles.button
-                    : wideScreenLayoutStyles.button
+                    ? layoutStyles.herobox
+                    : wideScreenLayoutStyles.herobox
                 }
               >
-                Learn More
-              </button>
-            </Link>
-          </div>
-        </header>
+                <h1
+                  className={
+                    this.state.isMobile
+                      ? layoutStyles.heading
+                      : wideScreenLayoutStyles.heading
+                  }
+                >
+                  Broad Vision. Careful Thought. Handcrafted Design.
+                </h1>
+                <Link to={"/Services"}>
+                  <button
+                    className={
+                      this.state.isMobile
+                        ? layoutStyles.button
+                        : wideScreenLayoutStyles.button
+                    }
+                  >
+                    Learn More
+                  </button>
+                </Link>
+              </div>
+            </header>
+          ) : (
+            <header className={layoutStyles.header__section}>
+              <div className={layoutStyles.overlay} />
+              <div
+                className={
+                  this.state.isMobile
+                    ? layoutStyles.herobox
+                    : wideScreenLayoutStyles.herobox
+                }
+              >
+                <h1
+                  className={
+                    this.state.isMobile
+                      ? layoutStyles.heading
+                      : wideScreenLayoutStyles.heading
+                  }
+                >
+                  Broad Vision. Careful Thought. Handcrafted Design.
+                </h1>
+                <Link to={"/Services"}>
+                  <button
+                    className={
+                      this.state.isMobile
+                        ? layoutStyles.button
+                        : wideScreenLayoutStyles.button
+                    }
+                  >
+                    Learn More
+                  </button>
+                </Link>
+              </div>
+            </header>
+          )
+        }
       </Media>
     )
   }
