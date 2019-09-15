@@ -1,0 +1,91 @@
+@import "../../../sass/base/variables";
+@import "../../../sass/base/mixins";
+
+@media screen and (min-width: 900px) {
+  .dt__navbar__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 6.6rem;
+  }
+  .dt__top {
+    padding: 0;
+  }
+  .dt__top__tier {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    padding: 0;
+    width: 100vw;
+  }
+  .dt__nav__item {
+    height: 6.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dt__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+  }
+  .dt__li {
+    @include nav-list;
+    margin: 0 1rem;
+  }
+  .dt__logo__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4rem;
+    width: 12rem;
+    z-index: 0;
+  }
+  .dt__button {
+    border: 1px solid $gold-color;
+    background: transparent;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 3.2rem;
+    width: 15rem;
+    &:hover {
+      cursor: pointer;
+      background: $gold-color;
+      color: #fff;
+    }
+  }
+}

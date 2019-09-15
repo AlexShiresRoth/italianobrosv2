@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu"
 import { ServiceMenu } from "./ServiceMenu"
 
 import layoutStyles from "./Nav.module.scss"
+import wideScreenLayoutStyles from "./NavDesktop.module.scss"
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ export default class Nav extends React.Component {
     this.state.toggled
       ? this.setState({ toggled: false })
       : this.setState({ toggled: true, contactToggled: false })
-      console.log(this.state.toggled)
+    console.log(this.state.toggled)
   }
 
   contactToggle = () => {
@@ -117,61 +118,62 @@ export default class Nav extends React.Component {
             <MobileMenu toggled={this.state.toggled} />
           </nav>
         </Media>
-        
+
         <Media query={{ minWidth: "601px" }}>
-          <nav className="navbar__container">
-            <div className="navbar__container--top">
-              <div className="navbar__container--top--desktop">
-                <div className="navbar__container--top--desktop--left">
-                  <ul>
-                    <div className="navbar__container--top--desktop--left--nav-item">
+          <nav className={wideScreenLayoutStyles.dt__navbar__container}>
+            <div className={wideScreenLayoutStyles.dt__top}>
+              <div className={wideScreenLayoutStyles.dt__top__tier}>
+                <div>
+                  <ul className={wideScreenLayoutStyles.dt__ul}>
+                    <div className={wideScreenLayoutStyles.dt__nav__item}>
                       <Link to="/" style={{ textDecoration: "none" }}>
-                        <li className="links">Home</li>
+                        <li className={wideScreenLayoutStyles.dt__li}>Home</li>
                       </Link>
                     </div>
                     <div
-                      className="navbar__container--top--desktop--left--nav-item"
+                      className={wideScreenLayoutStyles.dt__nav__item}
                       onMouseEnter={() => this.renderServicesHoverMenu()}
                       onMouseLeave={() => this.removeServicesHoverMenu()}
                       style={{ position: "relative" }}
                     >
                       <Link to="/Services" style={{ textDecoration: "none" }}>
-                        <li className="links">Services</li>
+                        <li className={wideScreenLayoutStyles.dt__li}>Services</li>
                       </Link>
                       {this.state.serviceToggle ? (
                         <ServiceMenu toggled={this.state.serviceToggle} />
                       ) : null}
                     </div>
-                    <div className="navbar__container--top--desktop--left--nav-item">
+                    <div className={wideScreenLayoutStyles.dt__nav__item}>
                       <Link to="/OurWork" style={{ textDecoration: "none" }}>
-                        <li className="links">Our Work</li>
+                        <li className={wideScreenLayoutStyles.dt__li}>Our Work</li>
                       </Link>
                     </div>
-                    <div className="navbar__container--top--desktop--left--nav-item">
+                    <div className={wideScreenLayoutStyles.dt__nav__item}>
                       <Link to="/About" style={{ textDecoration: "none" }}>
-                        <li className="links">About</li>
+                        <li className={wideScreenLayoutStyles.dt__li}>About</li>
                       </Link>
                     </div>
-                    <div className="navbar__container--top--desktop--left--nav-item">
+                    <div className={wideScreenLayoutStyles.dt__nav__item}>
                       <Link to="/Location" style={{ textDecoration: "none" }}>
-                        <li className="links">Contact</li>
+                        <li className={wideScreenLayoutStyles.dt__li}>Contact</li>
                       </Link>
                     </div>
                   </ul>
                 </div>
-                <div className="navbar__container--desktop--middle logo__nav">
+                <div className={wideScreenLayoutStyles.dt__logo__nav}>
                   <Link to="/">
                     <img
                       src={
                         "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
                       }
                       alt="italiano bros logo"
+                      className={wideScreenLayoutStyles.dt__logo__nav}
                     />
                   </Link>
                 </div>
-                <div className="navbar__container--desktop--right">
+                <div>
                   <button
-                    className="btn__transparent--small"
+                    className={wideScreenLayoutStyles.dt__button}
                     onClick={this.contactToggle}
                   >
                     {!this.state.contactToggled ? `Get A Quote` : `Close`}
