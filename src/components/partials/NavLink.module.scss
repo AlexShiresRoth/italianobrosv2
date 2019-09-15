@@ -1,11 +1,13 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-.mb__anchor {
-  list-style: none;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  color: $dark-color;
-  text-decoration: none;
-  font-size: 1.5rem;
+@media screen and (max-width: 600px) {
+  .mb__anchor {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    color: $dark-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
 }

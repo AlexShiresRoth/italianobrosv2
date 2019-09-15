@@ -1,50 +1,52 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-.nb__icon {
-  height: 1.6rem;
-  width: 2.7rem;
-  border-radius: 5px;
-  display: block;
-  -webkit-transition: all 0s ease;
-  transition: all 0s ease-in-out;
-  position: relative;
-  &:hover {
-    cursor: pointer;
+@media screen and (max-width: 600px) {
+  .nb__icon {
+    height: 1.6rem;
+    width: 2.7rem;
+    border-radius: 5px;
+    display: block;
+    -webkit-transition: all 0s ease;
+    transition: all 0s ease-in-out;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
   }
-}
-.nb__line:nth-child(1) {
-  @include nav-line;
-  top: 0;
-}
-.nb__line:nth-child(2) {
-  @include nav-line;
-  top: 0.8rem;
-}
-.nb__line:nth-child(3) {
-  @include nav-line;
-  top: 1.6rem;
-}
-.nb__line__rotated:nth-child(1) {
-  @include nav-line;
-  top: 0;
-  left:.1rem;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg) translateY(1.1rem);
-}
+  .nb__line:nth-child(1) {
+    @include nav-line;
+    top: 0;
+  }
+  .nb__line:nth-child(2) {
+    @include nav-line;
+    top: 0.8rem;
+  }
+  .nb__line:nth-child(3) {
+    @include nav-line;
+    top: 1.6rem;
+  }
+  .nb__line__rotated:nth-child(1) {
+    @include nav-line;
+    top: 0;
+    left: 0.1rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(1.1rem);
+  }
 
-.nb__line__cleared:nth-child(2) {
-  @include nav-line;
-  top: 0.8rem;
-  opacity: 0;
-  transform: translateX(-40vw);
-  -webkit-transform: translateX(-40vw);
-}
+  .nb__line__cleared:nth-child(2) {
+    @include nav-line;
+    top: 0.8rem;
+    opacity: 0;
+    transform: translateX(-40vw);
+    -webkit-transform: translateX(-40vw);
+  }
 
-.nb__line__rotated:nth-child(3) {
-  @include nav-line;
-  top: 1.6rem;
-  left:.1rem;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg) translateY(-1rem);
+  .nb__line__rotated:nth-child(3) {
+    @include nav-line;
+    top: 1.6rem;
+    left: 0.1rem;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-1rem);
+  }
 }

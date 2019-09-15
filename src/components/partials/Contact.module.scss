@@ -1,169 +1,171 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-.hidden {
-  @include hidden;
-}
-.cf__top__tier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.cf__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100vw;
-  padding: 1rem 0;
-  background: $gold-color;
-  color: #fff;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  z-index: 1;
-  &:hover {
-    cursor: pointer;
-    background: darken($gold-color, 5%);
+@media screen and (max-width: 600px) {
+  .hidden {
+    @include hidden;
   }
-}
+  .cf__top__tier {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .cf__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem 0;
+    background: $gold-color;
+    color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    z-index: 1;
+    &:hover {
+      cursor: pointer;
+      background: darken($gold-color, 5%);
+    }
+  }
 
-.cf__heading__h2 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 1.3rem;
-}
+  .cf__heading__h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
 
-.contact__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: darken($gold-color, 10%);
-  width: 100%;
-  visibility: visible;
-  -webkit-transform: translateY(0vh);
-  transform: translateY(0vh);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  opacity: 1;
-  max-height: 100vh;
-}
-.cf__form {
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-transform: translateY(0vh);
-  transform: translateY(0vh);
-  width: 80%;
-  -webkit-transition: all 0s ease;
-  transition: all 0s ease;
-  max-height: 100vh;
-}
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: darken($gold-color, 10%);
+    width: 100%;
+    visibility: visible;
+    -webkit-transform: translateY(0vh);
+    transform: translateY(0vh);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 1;
+    max-height: 100vh;
+  }
+  .cf__form {
+    opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-transform: translateY(0vh);
+    transform: translateY(0vh);
+    width: 80%;
+    -webkit-transition: all 0s ease;
+    transition: all 0s ease;
+    max-height: 100vh;
+  }
 
-.cf__input__column {
-  margin: 1rem 0;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-.cf__label {
-  text-transform: uppercase;
-  margin: 0.5rem 0;
-}
-.cf__input {
-  background: darken($gold-color, 10%);
-  color: #fff;
-  border: 0;
-  border-bottom: 1px solid $gold-color;
-}
-.cf__input::-webkit-input-placeholder {
-  color: #fff;
-  font-family: "Cormorant Garamond";
-  font-weight: 300;
-}
-.cf__input:-ms-input-placeholder {
-  color: #fff;
-  font-family: "Cormorant Garamond";
-  font-weight: 300;
-}
-.cf__input::-ms-input-placeholder {
-  color: #fff;
-  font-family: "Cormorant Garamond";
-  font-weight: 300;
-}
-.cf__input::placeholder {
-  color: #fff;
-  font-family: "Cormorant Garamond";
-  font-weight: 300;
-}
-.cf__input:focus {
-  outline: none;
-}
-.cf__input:-webkit-autofill,
-.cf__input:-webkit-autofill:hover,
-.cf__input:-webkit-autofill:focus,
-.cf__input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px darken($gold-color, 10%) inset !important;
-  -webkit-text-fill-color: #fff !important;
-  padding: 0;
-}
+  .cf__input__column {
+    margin: 1rem 0;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .cf__label {
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+  }
+  .cf__input {
+    background: darken($gold-color, 10%);
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid $gold-color;
+  }
+  .cf__input::-webkit-input-placeholder {
+    color: #fff;
+    font-family: "Cormorant Garamond";
+    font-weight: 300;
+  }
+  .cf__input:-ms-input-placeholder {
+    color: #fff;
+    font-family: "Cormorant Garamond";
+    font-weight: 300;
+  }
+  .cf__input::-ms-input-placeholder {
+    color: #fff;
+    font-family: "Cormorant Garamond";
+    font-weight: 300;
+  }
+  .cf__input::placeholder {
+    color: #fff;
+    font-family: "Cormorant Garamond";
+    font-weight: 300;
+  }
+  .cf__input:focus {
+    outline: none;
+  }
+  .cf__input:-webkit-autofill,
+  .cf__input:-webkit-autofill:hover,
+  .cf__input:-webkit-autofill:focus,
+  .cf__input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px darken($gold-color, 10%) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    padding: 0;
+  }
 
-.cf__button {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  color: $gold-color;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  background: #fff;
-  text-transform: uppercase;
-  border: 1px solid $gold-color;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  .cf__button {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    color: $gold-color;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: #fff;
+    text-transform: uppercase;
+    border: 1px solid $gold-color;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 
-  &:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 0 3px 3px darken($gold-color, 20%);
-    box-shadow: 0 3px 3px darken($gold-color, 20%);
+    &:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 0 3px 3px darken($gold-color, 20%);
+      box-shadow: 0 3px 3px darken($gold-color, 20%);
+    }
   }
 }
