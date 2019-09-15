@@ -38,6 +38,7 @@ export default class Nav extends React.Component {
     this.state.toggled
       ? this.setState({ toggled: false })
       : this.setState({ toggled: true, contactToggled: false })
+      console.log(this.state.toggled)
   }
 
   contactToggle = () => {
@@ -116,6 +117,7 @@ export default class Nav extends React.Component {
             <MobileMenu toggled={this.state.toggled} />
           </nav>
         </Media>
+        
         <Media query={{ minWidth: "601px" }}>
           <nav className="navbar__container">
             <div className="navbar__container--top">
