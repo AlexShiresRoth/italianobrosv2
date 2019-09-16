@@ -16,7 +16,7 @@ export const NavLink = props => {
 		<Link
 			to={path}
 			style={{ textDecoration: 'none' }}
-			key={Math.random() + Math.random() * 10000}
+			key={Math.floor(Math.random() + Math.random() * 10000)}
 		>
 			<li className={layoutStyles.mb__anchor}>{title}</li>
 		</Link>

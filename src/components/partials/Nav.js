@@ -87,7 +87,7 @@ export default class Nav extends React.Component {
   render() {
     return (
       <Fragment>
-        <Media query={{ maxWidth: "600px" }}>
+        <Media query="(max-width: 600px)">
           {matches =>
             matches ? (
               <nav

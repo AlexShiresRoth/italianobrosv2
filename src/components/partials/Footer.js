@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
   render() {
     return (
       <>
-        <Media query={{ maxWidth: "600px" }}>
+        <Media query="(max-width: 600px)">
           {matches =>
             matches ? (
               <footer className={layoutStyles.footer__section}>

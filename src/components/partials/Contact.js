@@ -121,7 +121,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Fragment>
-        <Media query={{ maxWidth: "600px" }}>
+        <Media query="(max-width: 600px)">
           {matches =>
             matches ? (
               <div className={layoutStyles.cf__top__tier}>
