@@ -5,9 +5,10 @@ import Media from "react-media"
 import NavMenu from "./NavMenu"
 import Contact from "./Contact"
 import MobileMenu from "./MobileMenu"
-import { ServiceMenu } from "./ServiceMenu"
+import DesktopNavMenu from "./DesktopNavMenu"
 
 import layoutStyles from "./Nav.module.scss"
+
 import wideScreenLayoutStyles from "./NavDesktop.module.scss"
 
 export default class Nav extends React.Component {
@@ -19,6 +20,10 @@ export default class Nav extends React.Component {
       serviceToggle: false,
       isMobile: false,
     }
+    this.handleWindowResize = this.handleWindowResize.bind(this)
+    this.renderServicesHoverMenu = this.renderServicesHoverMenu.bind(this)
+    this.removeServicesHoverMenu = this.removeServicesHoverMenu.bind(this)
+    this.contactToggle = this.contactToggle.bind(this)
   }
 
   //handles when service menus are toggled to stop background scrolling
@@ -87,131 +92,70 @@ export default class Nav extends React.Component {
   render() {
     return (
       <Fragment>
-        <Media query="(max-width: 600px)">
-          {matches =>
-            matches ? (
-              <nav
-                className={layoutStyles.navbar__container}
-                style={{ height: "0vh" }}
-              >
-                <div className={layoutStyles.nb__top}>
-                  <NavMenu
-                    onClick={this.toggleNav}
-                    toggled={this.state.toggled}
-                  />
-
-                  <div className={layoutStyles.nb__logo__nav}>
-                    <Link to="/">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
-                        }
-                        alt="italiano bros logo"
-                        className={layoutStyles.nb__image}
-                      />
-                    </Link>
-                  </div>
-                  <div />
-                </div>
-
-                <Contact
-                  onClick={this.contactToggle}
-                  toggled={this.state.contactToggled}
-                  isMobile={this.state.isMobile}
-                />
-
-                <MobileMenu toggled={this.state.toggled} />
-              </nav>
-            ) : (
-              <nav className={wideScreenLayoutStyles.dt__navbar__container}>
-                <div className={wideScreenLayoutStyles.dt__top}>
-                  <div className={wideScreenLayoutStyles.dt__top__tier}>
-                    <div>
-                      <ul className={wideScreenLayoutStyles.dt__ul}>
-                        <div className={wideScreenLayoutStyles.dt__nav__item}>
-                          <Link to="/" style={{ textDecoration: "none" }}>
-                            <li className={wideScreenLayoutStyles.dt__li}>
-                              Home
-                            </li>
-                          </Link>
-                        </div>
-                        <div
-                          className={wideScreenLayoutStyles.dt__nav__item}
-                          onMouseEnter={() => this.renderServicesHoverMenu()}
-                          onMouseLeave={() => this.removeServicesHoverMenu()}
-                          style={{ position: "relative" }}
-                        >
-                          <Link
-                            to="/Services"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <li className={wideScreenLayoutStyles.dt__li}>
-                              Services
-                            </li>
-                          </Link>
-                          {this.state.serviceToggle ? (
-                            <ServiceMenu toggled={this.state.serviceToggle} />
-                          ) : null}
-                        </div>
-                        <div className={wideScreenLayoutStyles.dt__nav__item}>
-                          <Link
-                            to="/OurWork"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <li className={wideScreenLayoutStyles.dt__li}>
-                              Our Work
-                            </li>
-                          </Link>
-                        </div>
-                        <div className={wideScreenLayoutStyles.dt__nav__item}>
-                          <Link to="/About" style={{ textDecoration: "none" }}>
-                            <li className={wideScreenLayoutStyles.dt__li}>
-                              About
-                            </li>
-                          </Link>
-                        </div>
-                        <div className={wideScreenLayoutStyles.dt__nav__item}>
-                          <Link
-                            to="/Location"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <li className={wideScreenLayoutStyles.dt__li}>
-                              Contact
-                            </li>
-                          </Link>
-                        </div>
-                      </ul>
-                    </div>
-                    <div className={wideScreenLayoutStyles.dt__logo__nav}>
-                      <Link to="/">
-                        <img
-                          src={
-                            "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
-                          }
-                          alt="italiano bros logo"
-                          className={wideScreenLayoutStyles.dt__logo__nav}
-                        />
-                      </Link>
-                    </div>
-                    <div>
-                      <button
-                        className={wideScreenLayoutStyles.dt__button}
-                        onClick={this.contactToggle}
-                      >
-                        {!this.state.contactToggled ? `Get A Quote` : `Close`}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <Contact
-                  onClick={this.contactToggle}
-                  toggled={this.state.contactToggled}
-                  isMobile={this.state.isMobile}
-                />
-              </nav>
-            )
+        <nav
+          className={
+            this.state.isMobile
+              ? layoutStyles.navbar__container
+              : wideScreenLayoutStyles.dt__navbar__container
           }
-        </Media>
+        >
+          <div
+            className={
+              this.state.isMobile
+                ? layoutStyles.nb__top
+                : wideScreenLayoutStyles.dt__top
+            }
+          >
+            {this.state.isMobile ? (
+              <NavMenu onClick={this.toggleNav} toggled={this.state.toggled} />
+            ) : null}
+            <div
+              className={
+                this.state.isMobile
+                  ? layoutStyles.top__tier
+                  : wideScreenLayoutStyles.dt__top__tier
+              }
+            ></div>
+
+            {!this.state.isMobile ? (
+              <DesktopNavMenu
+                isMobile={this.state.isMobile}
+                serviceToggle={this.state.serviceToggle}
+                renderServicesHoverMenu={this.renderServicesHoverMenu}
+                removeServicesHoverMenu={this.removeServicesHoverMenu}
+                contactToggle={this.contactToggle}
+                contactToggled={this.state.contactToggled}
+              />
+            ) : null}
+
+            <div
+              className={
+                this.state.isMobile
+                  ? layoutStyles.nb__logo__nav
+                  : wideScreenLayoutStyles.dt__logo__nav
+              }
+            >
+              {this.state.isMobile ? (
+                <Link to="/">
+                  <img
+                    src={
+                      "https://res.cloudinary.com/snackmanproductions/image/upload/v1568323268/italianobros/logos/Black_s394t0.png"
+                    }
+                    alt="italiano bros logo"
+                    className={layoutStyles.nb__image}
+                  />
+                </Link>
+              ) : null}
+            </div>
+            <div />
+          </div>
+          <Contact
+            onClick={this.contactToggle}
+            toggled={this.state.contactToggled}
+            isMobile={this.state.isMobile}
+          />
+          <MobileMenu toggled={this.state.toggled} />
+        </nav>
       </Fragment>
     )
   }
