@@ -138,7 +138,9 @@ export default class Footer extends React.Component {
                     >
                       Follow Us
                     </h5>
+
                     <Social icons={this.state.gallery} />
+                    
                   </div>
                   <div
                     className={

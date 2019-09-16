@@ -1,7 +1,7 @@
 @import "../../../sass/base/variables";
 @import "../../../sass/base/mixins";
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 601px) {
   .desktop {
     background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568246178/italianobros/home/main_header_pci4iq.jpg")
       center center fixed;
@@ -26,6 +26,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    transform: translateY(5vh);
     z-index: 2;
   }
   .overlay {
