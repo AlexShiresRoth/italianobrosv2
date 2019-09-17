@@ -161,6 +161,7 @@
     border: 1px solid $gold-color;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    text-transform: uppercase;
 
     &:hover {
       cursor: pointer;

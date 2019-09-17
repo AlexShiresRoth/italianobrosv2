@@ -3,16 +3,17 @@ import axios from "axios"
 
 import { Modal } from "./Modal"
 import ContactForm from "./ContactForm"
+import ContactFormDesktop from "./ContactFormDesktop"
 import layoutStyles from "./contactstyles/Contact.module.scss"
 import wideScreenStyles from "./contactstyles/ContactDesktop.module.scss"
 
 //TODO dry up this component
+//TODO render out desktop contact form component!
 export default class Contact extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isMobile: false,
       firstName: "",
       lastName: "",
       email: "",
@@ -149,8 +150,8 @@ export default class Contact extends React.Component {
             response={this.state.response}
           />
           {this.props.isMobile ? null : (
-            <h2 className={wideScreenStyles.nb__dt__left}>
-              <h2 className={wideScreenStyles.nb__dt__inner}>
+            <div className={wideScreenStyles.nb__dt__left}>
+              <div className={wideScreenStyles.nb__dt__inner}>
                 <h2 className={wideScreenStyles.nb__dt__h2}>Broad Vision.</h2>
                 <h2 className={wideScreenStyles.nb__dt__h2}>
                   Careful Thought.
@@ -158,8 +159,8 @@ export default class Contact extends React.Component {
                 <h2 className={wideScreenStyles.nb__dt__h2}>
                   Handcrafted Design.
                 </h2>
-              </h2>
-            </h2>
+              </div>
+            </div>
           )}
           <div
             className={
@@ -173,15 +174,23 @@ export default class Contact extends React.Component {
                 : `${
                     !this.props.toggled
                       ? wideScreenStyles.hidden
-                      : wideScreenStyles.cf__dt__form
+                      : wideScreenStyles.nb__dt__right
                   }`
             }
           >
-            <ContactForm
-              formSubmit={this.formSubmit}
-              inputs={inputs}
-              handleInputs={this.handleInputs}
-            />
+            {this.props.isMobile ? (
+              <ContactForm
+                formSubmit={this.formSubmit}
+                inputs={inputs}
+                handleInputs={this.handleInputs}
+              />
+            ) : (
+                <ContactFormDesktop
+                  formSubmit={this.formSubmit}
+                  inputs={inputs}
+                  handleInputs={this.handleInputs}
+                />
+            )}
           </div>
         </div>
       </Fragment>
