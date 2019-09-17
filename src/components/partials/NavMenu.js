@@ -1,6 +1,6 @@
 import React from 'react';
 
-import layoutStyles from './NavMenu.module.scss';
+import layoutStyles from './navstyles/NavMenu.module.scss';
 
 const NavMenu = (props) => {
    

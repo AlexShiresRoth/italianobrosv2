@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import layoutStyles from './ServiceMenu.module.scss';
+import layoutStyles from './navstyles/ServiceMenu.module.scss';
 
 //fix hash route
 export const ServiceMenu = props => {

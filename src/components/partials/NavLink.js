@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 
-import layoutStyles from './NavLink.module.scss';
+import layoutStyles from './navstyles/NavLink.module.scss';
 
 export const NavLink = props => {
 	const Links = [

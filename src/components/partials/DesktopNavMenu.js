@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { ServiceMenu } from "./ServiceMenu"
-import wideScreenLayoutStyles from "./NavDesktop.module.scss"
+import wideScreenLayoutStyles from "./navstyles/NavDesktop.module.scss"
 
 const DesktopNavMenu = props => {
   return (

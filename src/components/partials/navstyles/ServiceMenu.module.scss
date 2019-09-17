@@ -1,5 +1,5 @@
-@import "../../../sass/base/variables";
-@import "../../../sass/base/mixins";
+@import "../../../../sass/base/variables";
+@import "../../../../sass/base/mixins";
 
 @media screen and (min-width: 601px) {
   .service__menu {
@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: flex-start;
     position: absolute;
-    transform: translate(32%, 60%);
+    transform: translate(35%, 60%);
     box-shadow: 0 4px 10px -10px darken(#fff, 30%);
     padding: 0 16rem;
   }

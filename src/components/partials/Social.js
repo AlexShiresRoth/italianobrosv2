@@ -1,6 +1,6 @@
 import React from "react"
 
-import layoutStyles from "./Footer.module.scss"
+import layoutStyles from "./footerstyles/Footer.module.scss"
 
 const Social = props => {
   const renderSocialImages = props.icons.map((img, i) => {

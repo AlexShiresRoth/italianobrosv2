@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import Media from "react-media"
 
 import { NavLink } from "./NavLink"
-import layoutStyles from "./MobileMenu.module.scss"
+import layoutStyles from "./navstyles/MobileMenu.module.scss"
 
 export default class MobileMenu extends React.Component {
   render() {

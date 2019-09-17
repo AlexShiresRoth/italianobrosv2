@@ -2,8 +2,8 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 import Media from "react-media"
 
-import layoutStyles from "./About.module.scss"
-import wideScreenLayoutStyles from "./AboutDesktop.module.scss"
+import layoutStyles from "./aboutstyles/About.module.scss"
+import wideScreenLayoutStyles from "./aboutstyles/AboutDesktop.module.scss"
 
 export default class About extends React.Component {
   constructor(props) {

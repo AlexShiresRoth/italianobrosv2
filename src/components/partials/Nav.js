@@ -7,9 +7,8 @@ import Contact from "./Contact"
 import MobileMenu from "./MobileMenu"
 import DesktopNavMenu from "./DesktopNavMenu"
 
-import layoutStyles from "./Nav.module.scss"
-
-import wideScreenLayoutStyles from "./NavDesktop.module.scss"
+import layoutStyles from "./navstyles/Nav.module.scss"
+import wideScreenLayoutStyles from "./navstyles/NavDesktop.module.scss"
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -51,6 +50,7 @@ export default class Nav extends React.Component {
     this.state.contactToggled
       ? this.setState({ contactToggled: false })
       : this.setState({ contactToggled: true, toggled: false })
+      
   }
   renderServicesHoverMenu() {
     if (!this.state.serviceToggle) {

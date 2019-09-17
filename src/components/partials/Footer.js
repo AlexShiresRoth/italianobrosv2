@@ -4,8 +4,8 @@ import Media from "react-media"
 
 import Social from "./Social"
 
-import layoutStyles from "./Footer.module.scss"
-import wideScreenLayoutStyles from "./FooterDesktop.module.scss"
+import layoutStyles from "./footerstyles/Footer.module.scss"
+import wideScreenLayoutStyles from "./footerstyles/FooterDesktop.module.scss"
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -140,7 +140,6 @@ export default class Footer extends React.Component {
                     </h5>
 
                     <Social icons={this.state.gallery} />
-
                   </div>
                   <div
                     className={
@@ -183,7 +182,7 @@ export default class Footer extends React.Component {
                       </li>
                     </Link>
                     <Link
-                      to="/services"
+                      to="/Services"
                       style={{ textDecoration: "none", fontSize: "1.5rem" }}
                     >
                       <li

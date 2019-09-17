@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import layoutStyles from "./Header.module.scss"
-import wideScreenLayoutStyles from "./HeaderDesktop.module.scss"
+import layoutStyles from "./headerstyles/Header.module.scss"
+import wideScreenLayoutStyles from "./headerstyles/HeaderDesktop.module.scss"
 
 const Header = () => (
   <header className={layoutStyles.header__section}>
