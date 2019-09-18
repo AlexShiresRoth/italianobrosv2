@@ -33,7 +33,7 @@ export default class Nav extends React.Component {
       document.body.style.overflowY = "scroll"
     }
   }
-  // if nav menu is open on resize, close out
+  // if nav menu is open on resize to different media query, close out
   handleWindowResizeWithToggledMenu() {
     if (this.state.toggled && !this.state.isMobile) {
       this.setState({ toggled: !this.state.toggled })
@@ -50,7 +50,7 @@ export default class Nav extends React.Component {
     this.state.contactToggled
       ? this.setState({ contactToggled: false })
       : this.setState({ contactToggled: true, toggled: false })
-      
+
   }
   renderServicesHoverMenu() {
     if (!this.state.serviceToggle) {
