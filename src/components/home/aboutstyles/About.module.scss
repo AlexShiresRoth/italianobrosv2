@@ -114,7 +114,7 @@
   }
 
   .button__container {
-    @include button__container--center;
+    @include button__container--end;
   }
   .button {
     border: 1px solid $gold-color;
