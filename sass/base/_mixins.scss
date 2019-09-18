@@ -63,9 +63,11 @@
 @mixin container--grid--rows--three {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 12rem);
+  grid-template-rows: auto;
   margin: 1rem;
+  gap: 2rem;
   max-width: 60rem;
+  min-height: 40vh;
 }
 
 ////////////////////////buttons////////////////////
