@@ -40,20 +40,10 @@
     justify-items: end;
   }
   .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 2rem;
-    max-width: 60vw;
+    @include container--grid--rows--three;
   }
   .paragraph__section {
-    font-size: 1.25rem;
-    color: $dark-color;
-    line-height: 2;
-    letter-spacing: 1px;
-    font-weight: 300;
-    max-width: 50vw;
+    @include paragraph--section--desktop;
   }
   .paragraph {
     @include paragraph--desktop;

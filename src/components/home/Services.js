@@ -4,12 +4,6 @@ import { Link } from "gatsby"
 import layoutStyles from "./servicestyles/Services.module.scss"
 
 const Services = () => {
-  const servicesArray = [
-    { title: "custom architectural concrete", img: "c1" },
-    { title: "venetian plaster", img: "c2" },
-    { title: "stucco", img: "c3" },
-    { title: "dryWall", img: "c4" },
-  ]
 
   return (
     <section className={layoutStyles.services__section}>
