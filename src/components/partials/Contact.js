@@ -7,8 +7,6 @@ import ContactFormDesktop from "./ContactFormDesktop"
 import layoutStyles from "./contactstyles/Contact.module.scss"
 import wideScreenStyles from "./contactstyles/ContactDesktop.module.scss"
 
-//TODO dry up this component
-//TODO render out desktop contact form component!
 export default class Contact extends React.Component {
   constructor(props) {
     super(props)
@@ -121,8 +119,16 @@ export default class Contact extends React.Component {
         value: this.state.message,
       },
     ]
+
     return (
       <Fragment>
+        <Modal
+          status={this.state.sent}
+          onClick={this.modalClose}
+          modalCase={this.state.openModal}
+          closeContact={this.props.onClick}
+          response={this.state.response}
+        />
         <div
           className={
             this.props.isMobile
@@ -142,13 +148,6 @@ export default class Contact extends React.Component {
               </div>
             </div>
           ) : null}
-          <Modal
-            status={this.state.sent}
-            onClick={this.modalClose}
-            modalCase={this.state.openModal}
-            closeContact={this.props.onClick}
-            response={this.state.response}
-          />
           {this.props.isMobile ? null : (
             <div className={wideScreenStyles.nb__dt__left}>
               <div className={wideScreenStyles.nb__dt__inner}>
@@ -164,18 +163,9 @@ export default class Contact extends React.Component {
           )}
           <div
             className={
-              this.props.isMobile
-                ? ` 
-                ${
-                  !this.props.toggled
-                    ? layoutStyles.hidden
-                    : layoutStyles.contact__form
-                }`
-                : `${
-                    !this.props.toggled
-                      ? wideScreenStyles.hidden
-                      : wideScreenStyles.nb__dt__right
-                  }`
+              !this.props.toggled
+                ? layoutStyles.hidden
+                : layoutStyles.contact__form
             }
           >
             {this.props.isMobile ? (
@@ -185,11 +175,11 @@ export default class Contact extends React.Component {
                 handleInputs={this.handleInputs}
               />
             ) : (
-                <ContactFormDesktop
-                  formSubmit={this.formSubmit}
-                  inputs={inputs}
-                  handleInputs={this.handleInputs}
-                />
+              <ContactFormDesktop
+                formSubmit={this.formSubmit}
+                inputs={inputs}
+                handleInputs={this.handleInputs}
+              />
             )}
           </div>
         </div>

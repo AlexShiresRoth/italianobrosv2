@@ -6,21 +6,14 @@
     @include hidden;
   }
   .nb__dt__top__tier {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background: #fff;
     position: absolute;
     width: 100%;
-    height:30rem;
-    transform: translateY(8vh);
+    height: 30rem;
+    -webkit-transform: translateY(21%);
+    transform: translateY(21%);
   }
   .nb__dt__left {
     display: -webkit-box;
@@ -35,7 +28,7 @@
     justify-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
-    flex:1;
+    width: 100%;
   }
   .nb__dt__inner {
     display: -webkit-box;
@@ -75,7 +68,7 @@
     -ms-flex-pack: end;
     justify-content: center;
     height: 100%;
-    flex:1;
+
     background: darken($gold-color, 10%);
   }
   .cf__dt {
@@ -178,5 +171,4 @@
     -webkit-text-fill-color: #fff !important;
     padding: 0;
   }
-
 }

@@ -28,18 +28,20 @@ const ContactFormDesktop = props => {
   })
 
   return (
-    <form
-      className={wideScreenLayoutStyles.cf__dt__form}
-      onSubmit={props.formSubmit}
-    >
-      {renderInputs}
-      <button
-        className={wideScreenLayoutStyles.cf__dt__button}
+    <div className={wideScreenLayoutStyles.nb__dt__right}>
+      <form
+        className={wideScreenLayoutStyles.cf__dt__form}
         onSubmit={props.formSubmit}
       >
-        Get A Quote
-      </button>
-    </form>
+        {renderInputs}
+        <button
+          className={wideScreenLayoutStyles.cf__dt__button}
+          onSubmit={props.formSubmit}
+        >
+          Get A Quote
+        </button>
+      </form>
+    </div>
   )
 }
 

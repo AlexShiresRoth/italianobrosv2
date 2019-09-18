@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-import Media from "react-media"
 
 import NavMenu from "./NavMenu"
 import Contact from "./Contact"
@@ -50,7 +49,6 @@ export default class Nav extends React.Component {
     this.state.contactToggled
       ? this.setState({ contactToggled: false })
       : this.setState({ contactToggled: true, toggled: false })
-
   }
   renderServicesHoverMenu() {
     if (!this.state.serviceToggle) {
