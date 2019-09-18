@@ -28,6 +28,14 @@
   line-height: 2;
   letter-spacing: 1.3px;
   font-weight: 300;
+  font-family: 'Work Sans'
+}
+@mixin paragraph--desktop {
+  font-size: 1.5rem;
+  color: $dark-color;
+  line-height: 2;
+  letter-spacing: 1.3px;
+  font-family: 'Work Sans'
 }
 @mixin paragraph__section--desktop {
 	display: -webkit-box;
@@ -246,7 +254,7 @@
 }
 
 @mixin sub-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: $dark-color;
   max-width: 80rem;
 }

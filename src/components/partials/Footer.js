@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import Social from "./Social"
 import FooterLinks from "./footerLinks/FooterLinks"
-import FooterLinksDesktop from "./footerLinks/FooterLinksDesktop"
 
 import layoutStyles from "./footerstyles/Footer.module.scss"
 import wideScreenLayoutStyles from "./footerstyles/FooterDesktop.module.scss"
