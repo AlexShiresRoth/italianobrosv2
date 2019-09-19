@@ -17,7 +17,7 @@ export default class ServicesList extends React.Component {
       service: this.content[0],
       serviceTitle: "Venetian Plaster",
       animation: false,
-      location: window.location.href,
+      location: "",
     }
     this.changeContentSize = this.changeContentSize.bind(this)
   }
@@ -119,6 +119,7 @@ export default class ServicesList extends React.Component {
 
   componentDidMount() {
     this.handleWindowResize()
+    this.setState({ location: window.location.href })
     window.addEventListener("resize", this.handleWindowResize)
     this.getPathName()
   }
