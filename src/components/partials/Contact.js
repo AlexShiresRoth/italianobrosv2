@@ -144,7 +144,9 @@ export default class Contact extends React.Component {
               onClick={this.props.onClick}
             >
               <div className={layoutStyles.cf__heading}>
-                <h2 className={layoutStyles.cf__heading__h2}>Get A Quote</h2>
+                <h2 className={layoutStyles.cf__heading__h2}>
+                  {this.props.toggled ? "Close" : "Get A Quote"}
+                </h2>
               </div>
             </div>
           ) : null}

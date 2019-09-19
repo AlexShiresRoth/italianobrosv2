@@ -2,6 +2,9 @@
 @import "../../../../sass/base/mixins";
 
 @media screen and (max-width: 600px) {
+  .active {
+    border-bottom: 1px solid $gold-color;
+  }
   .navbar__container {
     display: -webkit-box;
     display: -ms-flexbox;

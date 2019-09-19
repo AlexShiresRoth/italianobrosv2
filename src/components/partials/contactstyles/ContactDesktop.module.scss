@@ -76,7 +76,7 @@
   }
   .cf__dt__form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 15vw);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 2rem;
   }
@@ -139,36 +139,45 @@
     color: #fff;
     border: 0;
     border-bottom: 1px solid $gold-color;
+    padding: 0.5rem 0;
+    &:focus {
+      color: #fff;
+      outline: none;
+      border: 1px solid lighten($gold-color, 10%);
+      padding: 0.5rem 0;
+    }
   }
   .cf__dt__input::-webkit-input-placeholder {
     color: #fff;
     font-family: "Cormorant Garamond";
     font-weight: 300;
+    padding: 0.5rem 0;
   }
   .cf__dt__input:-ms-input-placeholder {
     color: #fff;
     font-family: "Cormorant Garamond";
     font-weight: 300;
+    padding: 0.5rem 0;
   }
   .cf__dt__input::-ms-input-placeholder {
     color: #fff;
     font-family: "Cormorant Garamond";
     font-weight: 300;
+    padding: 0.5rem 0;
   }
   .cf__dt__input::placeholder {
     color: #fff;
     font-family: "Cormorant Garamond";
     font-weight: 300;
+    padding: 0.5rem 0;
   }
-  .cf__dt__input:focus {
-    outline: none;
-  }
+
   .cf__dt__input:-webkit-autofill,
   .cf__dt__input:-webkit-autofill:hover,
   .cf__dt__input:-webkit-autofill:focus,
   .cf__dt__input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px darken($gold-color, 10%) inset !important;
     -webkit-text-fill-color: #fff !important;
-    padding: 0;
+    padding: 0.5rem 0;
   }
 }

@@ -1,10 +1,13 @@
 import React from "react"
-import Layout from '../components/layout';
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import ServicesLayout from "../components/services/ServicesLayout"
 
 const Services = () => {
   return (
     <Layout>
-      <h1>Services Page</h1>
+      <SEO title="Services" />
+      <ServicesLayout />
     </Layout>
   )
 }

@@ -1,6 +1,10 @@
 @import "../../../../sass/base/variables";
 @import "../../../../sass/base/mixins";
-
+@media screen and (min-width: 601px) {
+  .active {
+    border-bottom: 1px solid $gold-color;
+  }
+}
 @media screen and (max-width: 600px) {
   .mb__anchor {
     list-style: none;
@@ -9,5 +13,8 @@
     color: $dark-color;
     text-decoration: none;
     font-size: 1.5rem;
+  }
+  .active {
+    border-bottom: 1px solid $gold-color;
   }
 }

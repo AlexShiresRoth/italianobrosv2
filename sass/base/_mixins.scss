@@ -22,28 +22,22 @@
   margin: 1.5rem 1rem;
 }
 @mixin paragraph {
-  font-size: 1.2rem;
-  color: $dark-color;
-  line-height: 2;
-  letter-spacing: 1.3px;
-  font-weight: 300;
-  font-family: "Work Sans";
-}
-@mixin paragraph--section--desktop {
   font-size: 1.25rem;
   color: $dark-color;
   line-height: 2;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
   font-weight: 300;
+  font-family: "Work Sans";
 }
+
 @mixin paragraph--desktop {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: $dark-color;
   line-height: 2;
   letter-spacing: 1.3px;
   font-family: "Work Sans";
 }
-@mixin paragraph__section--desktop {
+@mixin paragraph--section--desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,6 +130,7 @@
   margin: 1rem 0;
 }
 
+//////////////images///////////////////////
 @mixin image {
   height: 100%;
   width: 100%;
@@ -290,6 +285,11 @@
   color: $dark-color;
   max-width: 80rem;
 }
+
+@mixin sub-header-mobile {
+  font-size: 1.3rem;
+  color: $dark-color;
+}
 @mixin sub-header-tablet {
   font-size: 1.5rem;
   color: $dark-color;
@@ -300,6 +300,14 @@
   text-transform: uppercase;
   font-size: 2rem;
   margin: 1rem;
+}
+@mixin mobile-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  text-align: center;
 }
 
 //////////////////Desktop layout/////////////////////////
@@ -333,7 +341,15 @@
   align-items: center;
   margin: 2rem;
 }
-
+@mixin desktop-layout-subheading {
+  width: 40vw;
+  font-size: 1.25rem;
+  color: #707070;
+  line-height: 2;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-align: center;
+}
 @mixin desktop-container {
   display: -webkit-box;
   display: -ms-flexbox;

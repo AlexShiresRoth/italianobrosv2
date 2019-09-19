@@ -9,7 +9,11 @@ const DesktopNavMenu = props => {
     <div className={wideScreenLayoutStyles.dt__top__tier}>
       <ul className={wideScreenLayoutStyles.dt__ul}>
         <div className={wideScreenLayoutStyles.dt__nav__item}>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link
+            to="/"
+            style={{ textDecoration: "none" }}
+            activeClassName={wideScreenLayoutStyles.active}
+          >
             <li className={wideScreenLayoutStyles.dt__li}>Home</li>
           </Link>
         </div>
@@ -19,7 +23,11 @@ const DesktopNavMenu = props => {
           onMouseLeave={() => props.removeServicesHoverMenu()}
           style={{ position: "relative" }}
         >
-          <Link to="/Services" style={{ textDecoration: "none" }}>
+          <Link
+            to="/Services"
+            style={{ textDecoration: "none" }}
+            activeClassName={wideScreenLayoutStyles.active}
+          >
             <li className={wideScreenLayoutStyles.dt__li}>Services</li>
           </Link>
           {props.serviceToggle ? (
@@ -27,17 +35,29 @@ const DesktopNavMenu = props => {
           ) : null}
         </div>
         <div className={wideScreenLayoutStyles.dt__nav__item}>
-          <Link to="/OurWork" style={{ textDecoration: "none" }}>
+          <Link
+            to="/OurWork"
+            style={{ textDecoration: "none" }}
+            activeClassName={wideScreenLayoutStyles.active}
+          >
             <li className={wideScreenLayoutStyles.dt__li}>Our Work</li>
           </Link>
         </div>
         <div className={wideScreenLayoutStyles.dt__nav__item}>
-          <Link to="/About" style={{ textDecoration: "none" }}>
+          <Link
+            to="/About"
+            style={{ textDecoration: "none" }}
+            activeClassName={wideScreenLayoutStyles.active}
+          >
             <li className={wideScreenLayoutStyles.dt__li}>About</li>
           </Link>
         </div>
         <div className={wideScreenLayoutStyles.dt__nav__item}>
-          <Link to="/Location" style={{ textDecoration: "none" }}>
+          <Link
+            to="/Location"
+            style={{ textDecoration: "none" }}
+            activeClassName={wideScreenLayoutStyles.active}
+          >
             <li className={wideScreenLayoutStyles.dt__li}>Contact</li>
           </Link>
         </div>
