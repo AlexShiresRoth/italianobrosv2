@@ -1,12 +1,17 @@
-import React from 'react'
-import Layout from '../components/layout';
-
+import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import OurWorkLayout from "../components/ourwork/OurWorkLayout"
 const OurWork = () => {
-    return (
-        <Layout>
-            <h1>OurWOrks</h1>
-        </Layout>
-    )
+  const seoStr =
+    "Gallery of various concrete, plaster mouldings and venetian plaster."
+
+  return (
+    <Layout>
+      <SEO title={seoStr} />
+      <OurWorkLayout />
+    </Layout>
+  )
 }
 
 export default OurWork

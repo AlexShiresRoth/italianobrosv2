@@ -1,0 +1,18 @@
+@import "../../../../sass/base/variables";
+@import "../../../../sass/base/mixins";
+
+@media screen and (min-width: 601px) {
+  .ourwork__header {
+    background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568248716/italianobros/ourwork/ourwork-header_iejwel.jpg");
+
+    @include mobile-header;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ourwork__header {
+    background: url("https://res.cloudinary.com/snackmanproductions/image/upload/v1568248716/italianobros/ourwork/ourwork-header_iejwel.jpg");
+
+    @include mobile-header;
+  }
+}
