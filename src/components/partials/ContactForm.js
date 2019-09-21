@@ -25,17 +25,17 @@ const ContactForm = props => {
   })
 
   return (
-      <form className={layoutStyles.cf__form} onSubmit={props.formSubmit}>
-        <div className={layoutStyles.cf__input__column}>
-          {renderInputs}
-          <button
-            className={layoutStyles.cf__button}
-            onSubmit={props.formSubmit}
-          >
-            Get A Quote
-          </button>
-        </div>
-      </form>
+    <form
+      className={props.toggled ? layoutStyles.cf__form : layoutStyles.hidden}
+      onSubmit={props.formSubmit}
+    >
+      <div className={layoutStyles.cf__input__column}>
+        {renderInputs}
+        <button className={layoutStyles.cf__button} onSubmit={props.formSubmit}>
+          Get A Quote
+        </button>
+      </div>
+    </form>
   )
 }
 

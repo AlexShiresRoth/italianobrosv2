@@ -175,6 +175,7 @@ export default class Contact extends React.Component {
                 formSubmit={this.formSubmit}
                 inputs={inputs}
                 handleInputs={this.handleInputs}
+                toggled={this.props.toggled}
               />
             ) : (
               <ContactFormDesktop
