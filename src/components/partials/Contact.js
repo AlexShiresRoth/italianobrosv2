@@ -53,7 +53,7 @@ export default class Contact extends React.Component {
 
     return await axios({
       method: "post",
-      url: `http://www.italianobrosenterprise.com/api/send-email?&email=${info.email}&firstName=${info.firstName}&lastName=${info.lastName}&phone=${info.phone}&message=${info.message}`,
+      url: `https://italianobrosenterprise.herokuapp.com/api/send-email?&email=${info.email}&firstName=${info.firstName}&lastName=${info.lastName}&phone=${info.phone}&message=${info.message}`,
       data: {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
       },
