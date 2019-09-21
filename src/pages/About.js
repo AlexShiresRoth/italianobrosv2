@@ -1,12 +1,16 @@
-import React from 'react'
-import Layout from '../components/layout';
+import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+import AboutLayout from "../components/about/AboutLayout"
 
 const About = () => {
-    return (
-        <Layout>
-            <h1>About Page</h1>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <SEO title="Italiano Bros. Enterprise"></SEO>
+      <AboutLayout />
+    </Layout>
+  )
 }
 
 export default About
