@@ -97,7 +97,7 @@
     display: none;
   }
   .button__container {
-    @include button__container--end;
+    @include button__container--center;
   }
   .button {
     border: 1px solid $gold-color;
