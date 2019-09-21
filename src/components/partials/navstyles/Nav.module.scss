@@ -5,6 +5,12 @@
   .active {
     border-bottom: 1px solid $gold-color;
   }
+  .hidden {
+    @include hidden;
+  }
+  .none {
+    display: none;
+  }
   .navbar__container {
     display: -webkit-box;
     display: -ms-flexbox;

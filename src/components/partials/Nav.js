@@ -110,7 +110,7 @@ export default class Nav extends React.Component {
             <div
               className={
                 this.state.isMobile
-                  ? layoutStyles.top__tier
+                  ? layoutStyles.none
                   : wideScreenLayoutStyles.dt__top__tier
               }
             ></div>
@@ -152,7 +152,9 @@ export default class Nav extends React.Component {
             toggled={this.state.contactToggled}
             isMobile={this.state.isMobile}
           />
-          <MobileMenu toggled={this.state.toggled} />
+          {this.state.isMobile ? (
+            <MobileMenu toggled={this.state.toggled} />
+          ) : null}
         </nav>
       </Fragment>
     )

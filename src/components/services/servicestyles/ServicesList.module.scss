@@ -231,6 +231,7 @@
   .servicesList__item__heading {
     width: 100%;
     padding: 0 1rem;
+    align-items: flex-start;
     & h3 {
       color: $dark-color;
       margin: 1rem 0;
