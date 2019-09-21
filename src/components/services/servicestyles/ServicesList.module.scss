@@ -31,7 +31,7 @@
     @include paragraph--section--desktop;
     & p {
       @include paragraph--desktop;
-      max-width: 60vw;
+      max-width: 50vw;
     }
   }
   .container__column {
