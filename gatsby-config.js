@@ -18,8 +18,7 @@ module.exports = {
         background_color: `#CEB862`,
         theme_color: `#CEB862`,
         display: `minimal-ui`,
-        icon:
-          "https://res.cloudinary.com/snackmanproductions/image/upload/v1569460921/italianobros/icons/Knife_vhronj.png", // This path is relative to the root of the site.
+        icon: "public/images/Knife.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
