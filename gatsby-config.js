@@ -18,7 +18,7 @@ module.exports = {
         background_color: `#CEB862`,
         theme_color: `#CEB862`,
         display: `minimal-ui`,
-        icon: "public/images/Knife.png", // This path is relative to the root of the site.
+        icon: "src/images/Knife.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
