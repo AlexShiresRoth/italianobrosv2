@@ -134,6 +134,47 @@
     cursor: pointer;
   }
 }
+@media screen and (min-width: 601px) and(max-width:855px) {
+  .panel {
+    background: $gold-color;
+    height: 6rem;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .heading {
+    @include desktop-layout-heading;
+    & h2 {
+      margin: 1rem;
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      text-align: center;
+      color: $gold-color;
+    }
+  }
+  .services__image__grid {
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    grid-template-rows: auto;
+    animation: fadeIn 1s ease-in;
+  }
+  .services__image {
+    min-height: 270px;
+    min-width: 270px;
+  }
+  .paragraph {
+    @include paragraph--section--desktop;
+    & p {
+      @include paragraph--desktop;
+      max-width: 80vw;
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
   .servicesList__item {
