@@ -51,9 +51,11 @@ export default class Contact extends React.Component {
       message: this.state.message,
     }
 
+    const corsAnywhere = "https://cors-anywhere.herokuapp.com/"
+
     return await axios({
       method: "post",
-      url: `https://italianoenterprise.herokuapp.com/api/send-email?&email=${info.email}&firstName=${info.firstName}&lastName=${info.lastName}&phone=${info.phone}&message=${info.message}`,
+      url: `${corsAnywhere}https://italianoenterprise.herokuapp.com/api/send-email?&email=${info.email}&firstName=${info.firstName}&lastName=${info.lastName}&phone=${info.phone}&message=${info.message}`,
       data: {
         headers: {
           "Access-Control-Allow-Origin": "*",
