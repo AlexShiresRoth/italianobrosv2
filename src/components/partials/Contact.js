@@ -55,7 +55,10 @@ export default class Contact extends React.Component {
       method: "post",
       url: `https://italianoenterprise.herokuapp.com/api/send-email?&email=${info.email}&firstName=${info.firstName}&lastName=${info.lastName}&phone=${info.phone}&message=${info.message}`,
       data: {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
       },
     })
       .then(res => {
