@@ -74,6 +74,7 @@ export default class Contact extends React.Component {
           openModal: "show",
           response: res,
         })
+        console.log(this.state.response)
       })
       .catch(err => {
         this.setState({
@@ -81,6 +82,7 @@ export default class Contact extends React.Component {
           openModal: "show",
           response: err.message,
         })
+        console.log("error", this.state.response)
       })
   }
 
