@@ -1,7 +1,7 @@
 @import "../../../../sass/base/variables";
 @import "../../../../sass/base/mixins";
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .hidden {
     @include hidden;
   }

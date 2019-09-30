@@ -7,7 +7,7 @@ import Home from "../components/home/Home"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home Italiano Bros. Enterprise" />
     <Home />
   </Layout>
 )

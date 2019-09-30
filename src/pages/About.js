@@ -7,7 +7,7 @@ import AboutLayout from "../components/about/AboutLayout"
 const About = () => {
   return (
     <Layout>
-      <SEO title="Italiano Bros. Enterprise"></SEO>
+      <SEO title="About Italiano Bros. Enterprise"></SEO>
       <AboutLayout />
     </Layout>
   )

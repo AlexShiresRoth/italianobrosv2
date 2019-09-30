@@ -1,11 +1,11 @@
 @import "../../../../sass/base/variables";
 @import "../../../../sass/base/mixins";
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 861px) {
   .active {
     border-bottom: 1px solid $gold-color;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 860px) {
   .mb__anchor {
     list-style: none;
     padding: 0.5rem;

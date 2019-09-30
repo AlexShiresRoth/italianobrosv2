@@ -6,7 +6,7 @@ import ServicesLayout from "../components/services/ServicesLayout"
 const Services = () => {
   return (
     <Layout>
-      <SEO title="Services" />
+      <SEO title="Services Page" />
       <ServicesLayout />
     </Layout>
   )

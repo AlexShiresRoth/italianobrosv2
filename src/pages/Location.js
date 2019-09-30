@@ -6,7 +6,7 @@ import LocationLayout from "../components/location/LocationLayout"
 const Location = () => {
   return (
     <Layout>
-      <SEO title="contact info page" />
+      <SEO title="Contact page" />
       <LocationLayout />
     </Layout>
   )

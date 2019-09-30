@@ -62,7 +62,9 @@ export default class Nav extends React.Component {
   }
   //sets state to mobile view
   handleWindowResize = () => {
-    this.setState({ isMobile: window.innerWidth < 600 })
+    this.setState({
+      isMobile: window.innerWidth < 860,
+    })
   }
   componentDidMount() {
     window.addEventListener("resize", this.handleWindowResize)
