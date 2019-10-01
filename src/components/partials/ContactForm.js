@@ -5,7 +5,7 @@ import layoutStyles from "./contactstyles/Contact.module.scss"
 const ContactForm = props => {
   const renderInputs = props.inputs.map((input, i) => {
     return (
-      <div className={layoutStyles.cf__input__column}>
+      <div key={i} className={layoutStyles.cf__input__column}>
         <label className={layoutStyles.cf__label} htmlFor={input.title}>
           {input.label}
         </label>
@@ -13,7 +13,6 @@ const ContactForm = props => {
           className={layoutStyles.cf__input}
           name={input.title}
           id={input.title}
-          key={i}
           type={input.type}
           placeholder={input.placeholder}
           value={input.value}

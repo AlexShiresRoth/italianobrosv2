@@ -5,7 +5,7 @@ import wideScreenLayoutStyles from "./contactstyles/ContactDesktop.module.scss"
 const ContactFormDesktop = props => {
   const renderInputs = props.inputs.map((input, i) => {
     return (
-      <div className={wideScreenLayoutStyles.cf__input__column}>
+      <div key={i} className={wideScreenLayoutStyles.cf__input__column}>
         <label
           className={wideScreenLayoutStyles.cf__dt__label}
           htmlFor={input.title}
@@ -16,7 +16,6 @@ const ContactFormDesktop = props => {
           className={wideScreenLayoutStyles.cf__dt__input}
           name={input.title}
           id={input.title}
-          key={i}
           type={input.type}
           placeholder={input.placeholder}
           value={input.value}

@@ -1,7 +1,7 @@
 @import "../../../../sass/base/variables";
 @import "../../../../sass/base/mixins";
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 851px) {
   .image__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,6 +17,26 @@
   .grid__image {
     height: 35rem;
     width: 30rem;
+    object-fit: cover;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+@media screen and (min-width: 601px) and(max-width: 850px) {
+  .image__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    justify-items: center;
+    align-content: center;
+    margin: 2rem;
+  }
+  .grid__item {
+    padding: 0;
+  }
+  .grid__image {
+    height: 28rem;
+    width: 23rem;
     object-fit: cover;
     animation: fadeIn 0.5s ease-in-out;
   }
