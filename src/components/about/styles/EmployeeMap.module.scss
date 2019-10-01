@@ -57,6 +57,23 @@
     }
   }
 }
+@media screen and (min-width: 601px) and (max-width: 850px) {
+  .about__info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0rem;
+    justify-items: center;
+    align-self: center;
+    max-width: 90vw;
+    margin: 2rem 0;
+  }
+  .about__image {
+    height: 28rem;
+    width: 25rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .about__info {
