@@ -24,17 +24,22 @@ module.exports = {
         background_color: `#CEB862`,
         theme_color: `#CEB862`,
         display: `minimal-ui`,
-        icon: "src/images/Knife.png", // This path is relative to the root of the site.
-      },
+        icon: `src/images/Knife.png`,
+      }, // This path is relative to the root of the site.
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         exclude: [`/admin`, `/tags/links`],
       },
-
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-149441070-1`,
       },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.italianobrosenterprise.com/",
