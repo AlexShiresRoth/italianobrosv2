@@ -14,7 +14,7 @@ class Footer extends React.Component {
       isMobile: false,
     }
   }
- 
+
   //sets state to mobile view
   handleWindowResize = () => {
     this.setState({ isMobile: window.innerWidth < 600 })
@@ -35,7 +35,7 @@ class Footer extends React.Component {
             <div className={layoutStyles.f__container}>
               <div className={layoutStyles.f__left}>
                 <p className={layoutStyles.f__left__p}>Follow Us</p>
-                <Social  isMobile={this.state.isMobile} />
+                <Social isMobile={this.state.isMobile} />
                 <p className={layoutStyles.f__left__p}>Contact Us</p>
                 <a
                   className={layoutStyles.f__left__anchor}
@@ -45,16 +45,14 @@ class Footer extends React.Component {
                 </a>
                 <a
                   className={layoutStyles.f__left__anchor}
-                  href="mailto:italianoenterprise@gmail.com"
+                  href="mailto:office@italianobrosenterprise.com"
                 >
-                  italianoenterprise@gmail.com
+                  office@italianobrosenterprise.com
                 </a>
               </div>
               <div className={layoutStyles.f__right}>
                 <ul className={layoutStyles.f__right__ul}>
-                  <FooterLinks
-                    isMobile={this.state.isMobile}
-                  />
+                  <FooterLinks isMobile={this.state.isMobile} />
                 </ul>
               </div>
             </div>
@@ -122,18 +120,16 @@ class Footer extends React.Component {
                 <p className={wideScreenLayoutStyles.f__desktop__bottom__p}>
                   <a
                     className={wideScreenLayoutStyles.f__desktop__bottom__a}
-                    href="mailto:italianoenterprise@gmail.com"
+                    href="mailto:office@italianobrosenterprise.com"
                   >
-                    italianoenterprise@gmail.com
+                    office@italianobrosenterprise.com
                   </a>
                 </p>
               </div>
             </div>
             <div className={wideScreenLayoutStyles.f__desktop__right}>
               <ul className={wideScreenLayoutStyles.f__desktop__right__ul}>
-                <FooterLinks
-                  isMobile={this.state.isMobile}
-                />
+                <FooterLinks isMobile={this.state.isMobile} />
               </ul>
             </div>
           </footer>
