@@ -26,8 +26,8 @@ const LocationInfo = () => {
           <h3>Email</h3>
           <hr />
           <p>
-            <a href="mailto:italianoenterprise@gmail.com">
-              italianoenterprise@gmail.com
+            <a href="mailto:office@italianobrosenterprise.com">
+              office@italianobrosenterprise.com
             </a>
           </p>
         </div>
