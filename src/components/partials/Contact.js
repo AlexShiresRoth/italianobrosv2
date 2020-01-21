@@ -18,6 +18,7 @@ export default class Contact extends React.Component {
       phone: "",
       message: "",
       sent: "",
+      loading: false,
       openModal: "hidden",
     }
     this.formSubmit = this.formSubmit.bind(this)
@@ -42,7 +43,7 @@ export default class Contact extends React.Component {
 
   formSubmit = async e => {
     e.preventDefault()
-
+    this.setState({ loading: true })
     const info = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -73,6 +74,7 @@ export default class Contact extends React.Component {
           message: "",
           sent: "success",
           openModal: "show",
+          loading: false,
           response: res,
         })
         console.log(this.state.response)
@@ -81,6 +83,7 @@ export default class Contact extends React.Component {
         this.setState({
           sent: "error",
           openModal: "show",
+          loading: false,
           response: err.message,
         })
         console.log("error", this.state.response)
@@ -182,12 +185,14 @@ export default class Contact extends React.Component {
                 inputs={inputs}
                 handleInputs={this.handleInputs}
                 toggled={this.props.toggled}
+                loading={this.state.loading}
               />
             ) : (
               <ContactFormDesktop
                 formSubmit={this.formSubmit}
                 inputs={inputs}
                 handleInputs={this.handleInputs}
+                loading={this.state.loading}
               />
             )}
           </div>

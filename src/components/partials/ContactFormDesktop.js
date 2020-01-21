@@ -2,8 +2,8 @@ import React from "react"
 
 import wideScreenLayoutStyles from "./contactstyles/ContactDesktop.module.scss"
 
-const ContactFormDesktop = props => {
-  const renderInputs = props.inputs.map((input, i) => {
+const ContactFormDesktop = ({ inputs, handleInputs, formSubmit, loading }) => {
+  const renderInputs = inputs.map((input, i) => {
     return (
       <div key={i} className={wideScreenLayoutStyles.cf__input__column}>
         <label
@@ -19,7 +19,7 @@ const ContactFormDesktop = props => {
           type={input.type}
           placeholder={input.placeholder}
           value={input.value}
-          onChange={e => props.handleInputs(e)}
+          onChange={e => handleInputs(e)}
           required
         />
       </div>
@@ -30,14 +30,14 @@ const ContactFormDesktop = props => {
     <div className={wideScreenLayoutStyles.nb__dt__right}>
       <form
         className={wideScreenLayoutStyles.cf__dt__form}
-        onSubmit={props.formSubmit}
+        onSubmit={formSubmit}
       >
         {renderInputs}
         <button
           className={wideScreenLayoutStyles.cf__dt__button}
-          onSubmit={props.formSubmit}
+          onSubmit={formSubmit}
         >
-          Get A Quote
+          {loading ? "Sending..." : "Get A Quote"}
         </button>
       </form>
     </div>
